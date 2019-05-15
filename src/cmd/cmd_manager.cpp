@@ -1,17 +1,32 @@
 #include "cmd_manager.h"
 
-CCmdManager::CCmdManager()
+CCmdManager::CCmdManager(CHandleFileSys* a_p_hdle_file_sys)
 {
-    m_p_hdle_catelog    = new CHandleCatelog();
-    m_p_hdle_aval_disk  = new CHandleAvaliableDisk();
-    m_p_hdle_file_sys   = new CHandleFileSys(m_p_hdle_catelog, m_p_hdle_aval_disk);
+    m_b_init_over = false;
+    if (NULL == a_p_hdle_file_sys)
+    {
+        return;
+    }
+
+    if (!a_p_hdle_file_sys->InitOver())
+    {
+        return;
+    }
+
+    m_p_hdle_file_sys = a_p_hdle_file_sys;
+
+    if (!InitCmd())
+    {
+        return;
+    }
+
+    m_b_init_over = true;
 }
 
 // RAII
 CCmdManager::~CCmdManager()
 {
     this->ClearCmd();
-    DELETE_PTR(m_p_hdle_file_sys);
 }
 
 bool CCmdManager::ClearCmd()

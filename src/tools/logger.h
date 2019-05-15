@@ -35,32 +35,32 @@ public:
 	inline bool InitOver() {return m_b_init_over;};
 
 private:
-	std::string m_p_log_name;
-	FILE* m_p_log;
-	bool m_b_init_over;
+	std::string 	m_p_log_name;
+	FILE* 			m_p_log;
+	bool 			m_b_init_over;
 private:
 	static CLogger* m_p_this;
 };
 
-
+# if 0
 void test()
 {
-	do
-	{
-		std::string l_str_log = CDate::GetCTime();
-		l_str_log += " ";
-		l_str_log += __FILE__;
-		l_str_log += ":";
-		l_str_log += __LINE__;
-		l_str_log += " ";
-		l_str_log += #log_level;
-		l_str_log += "|";
-		l_str_log += "str";
-		l_str_log += "\n";
+	std::string l_str_log = CDate::GetCTime();										
+	l_str_log += " ";																
+	l_str_log += __FILE__;															
+	l_str_log += ":";																
+	l_str_log += __FUNCTION__;														
+	l_str_log += ":"	;															
+	l_str_log += __LINE__;															
+	l_str_log += " ";																
+	l_str_log += #log_level;														
+	l_str_log += "|";																
+	l_str_log += "str";																
+	l_str_log += "\n";				
 
-
-	} while(0);
+	CLogger::Instance()->WriteRecord(l_str_log); 									
 }
+#endif
 
 #define LOG_RECORD(log_level, str) 													\
 do { 																				\
@@ -68,11 +68,13 @@ do { 																				\
 	l_str_log += " ";																\
 	l_str_log += __FILE__;															\
 	l_str_log += ":";																\
+	l_str_log += __FUNCTION__;														\
+	l_str_log += ":";																\
 	l_str_log += __LINE__;															\
 	l_str_log += " ";																\
 	l_str_log += #log_level;														\
 	l_str_log += "|";																\
-	l_str_log += "str";																\
+	l_str_log += str;																\
 	l_str_log += "\n";																\
 	CLogger::Instance()->WriteRecord(l_str_log); 									\
 } while(0);

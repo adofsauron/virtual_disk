@@ -23,12 +23,13 @@ do							\
 	}						\
 } while (0);
 
-// 单独的节点占用的空间,不包含子节点空间
-#define DEF_JUST_NODE_SIZE (sizeof(SCateNode)) 
+
+// 计算结构体空间大小
+#define MCRO_STRUCT_SIZE(a_struct)	(sizeof(a_struct))
 
 // 一个目录节点一共占用的空间
-#define DEF_NODE_SIZE (node)\
-	( (node.m_i_son_num > 0) ? (DEF_JUST_NODE_SIZE + (sizeof(uint32) * node.m_i_son_num)) : DEF_JUST_NODE_SIZE )
+#define MACRO_CATE_NODE_SIZE(a_o_node) \
+	( (a_o_node.m_i_son_num > 0) ? (sizeof(a_o_node) + (sizeof(uint32) * a_o_node.m_i_son_num)) : sizeof(a_o_node) )
 	
 
 #endif//__MACRO_H__

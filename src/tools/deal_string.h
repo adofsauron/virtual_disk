@@ -14,9 +14,10 @@
 
 class CDealString
 {
-public:
+private:
 	CDealString();
-	~CDealString();
+	CDealString(const CDealString&);
+	CDealString& operator = (const CDealString&);
 
 public:
 	// 是否是中文
