@@ -11,4 +11,13 @@
 - cmd:      命令类目录
 - handle:   底层处理类
 - start:    启动入口管理目录
-- gtest:    测试文件目录
+
+### build: vs2017工程文件
+
+## 运行方法
+
+*需要先安装cmake*
+1. 执行./buildcmake.sh
+2. cmake CMakeLists.txt
+3. 执行make
+4. 执行./disk启动服务
