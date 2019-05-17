@@ -1,6 +1,5 @@
 #include "deal_file.h"
 
-
 bool CDealFile::CheckFileAccess(const char* a_p_file_name, const uint32 a_i_mode)
 {
     if (NULL == a_p_file_name)
@@ -54,7 +53,7 @@ bool CDealFile::CheckFileExecute(const char* a_p_file_name)
     return CheckFileAccess(a_p_file_name, X_OK);
 }
 
-bool CDealFile::FileOpen(const char* a_p_file_name, const char* a_p_file_mode, FILE* a_p_file)
+bool CDealFile::FileOpen(const char* a_p_file_name, const char* a_p_file_mode, FILE*& a_p_file)
 {
     if (!CheckFileExist(a_p_file_name)) // 文件不存在
     {
@@ -131,7 +130,7 @@ bool CDealFile::FileGetSize(const char* a_p_file_name, uint64& a_i_file_size)
     return true;
 }
 
-bool CDealFile::FileWrite(const void* a_p_buff, uint64 a_i_buff_size, uint64 a_i_size, uint64 a_i_count, FILE* a_p_file)
+bool CDealFile::FileWrite(const void* a_p_buff, uint64 a_i_buff_size, uint64 a_i_size, uint64 a_i_count, FILE*& a_p_file)
 {
     if (NULL == a_p_file)
     {
@@ -173,7 +172,7 @@ bool CDealFile::FileWrite(const void* a_p_buff, uint64 a_i_buff_size, uint64 a_i
     return true;
 }
 
-bool CDealFile::FileRead(void* a_p_buff, uint64 a_i_buff_size, uint64 a_i_size, uint64 a_i_count, FILE* a_p_file)
+bool CDealFile::FileRead(void* a_p_buff, uint64 a_i_buff_size, uint64 a_i_size, uint64 a_i_count, FILE*& a_p_file)
 {
     if (NULL == a_p_file)
     {
@@ -206,7 +205,7 @@ bool CDealFile::FileRead(void* a_p_buff, uint64 a_i_buff_size, uint64 a_i_size, 
         return false;
     }
 
-    uint64 l_i_read_count = fwrite(a_p_buff, a_i_size, a_i_count, a_p_file);
+    uint64 l_i_read_count = fread(a_p_buff, a_i_size, a_i_count, a_p_file);
     if (l_i_read_count != a_i_count)
     {
         return false;

@@ -8,11 +8,12 @@
 #include "config.h"
 #include "macro.h"
 
+
 // 目录节点类型
 typedef enum ENUM_CNODE_TYPE
 {
 	CNODE_INVIAL	= 0, // 非法类型
-	CNODE_DIR		= 1, // [d]目录类型, 不关联inode
+	CNODE_DIR		= 1, // [d]目录类型
 	CNODE_FILE		= 2, // [-]文本文件类型(含二进制文件)
 	CNODE_LINK		= 3, // [l]软链接文件, 保存的inode应该与被链接的节点inode相同
 }ENUM_CNODE_TYPE; // 兼容c
@@ -51,7 +52,13 @@ typedef struct SCateNode // 目录树节点
 
 	~SCateNode()
 	{
-		DELETE_PTR(m_p_son_set);
+		// new -> delete
+		// malloc -> free
+		if (m_i_son_num>0)
+		{
+			FREE_PTR(m_p_son_set);
+		}
+		
 	}
 
 	uint32				m_i_id;														// 节点id

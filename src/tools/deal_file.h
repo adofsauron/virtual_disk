@@ -30,7 +30,7 @@ public:
     static bool CheckFileExecute(const char* a_p_file_name);
 
     // 打开
-    static bool FileOpen(const char* a_p_file_name, const char* a_p_file_mode, FILE* a_p_file);
+    static bool FileOpen(const char* a_p_file_name, const char* a_p_file_mode, FILE*& a_p_file);
 
     // 关闭
     static bool FileClose(FILE* a_p_file);
@@ -45,10 +45,10 @@ public:
     // 没什么办法根据指针获取指向空间大小,所以要把地址的空间大小传入
 
     // 读文件
-    static bool FileRead(void* a_p_buff, uint64 a_i_buff_size, uint64 a_i_size, uint64 a_i_count, FILE* a_p_file);
+    static bool FileRead(void* a_p_buff, uint64 a_i_buff_size, uint64 a_i_size, uint64 a_i_count, FILE*& a_p_file);
 
     // 写文件
-    static bool FileWrite(const void* a_p_buff, uint64 a_i_buff_size, uint64 a_i_size, uint64 a_i_count, FILE* a_p_file);
+    static bool FileWrite(const void* a_p_buff, uint64 a_i_buff_size, uint64 a_i_size, uint64 a_i_count, FILE*& a_p_file);
 
 private:
     // l_i_mode:待检查的属性

@@ -1,0 +1,844 @@
+﻿  env.cpp
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  client_cmd_adaptor.cpp
+e:\work\dev\projects\virtual_disk\src\client\client_cmd_adaptor.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_manager.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_manager.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_exit.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\client\client_cmd_adaptor.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\client\client_cmd_adaptor.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+  client_io.cpp
+e:\work\dev\projects\virtual_disk\src\client\client_io.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\client\client_io.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\client\client_io.h(8): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_manager.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_exit.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\client\client_parser.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\client\client_io.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\client\client_io.cpp(63): error C2001: newline in constant
+e:\work\dev\projects\virtual_disk\src\client\client_io.cpp(64): error C2143: syntax error: missing ';' before 'return'
+e:\work\dev\projects\virtual_disk\src\client\client_io.cpp(81): error C2001: newline in constant
+e:\work\dev\projects\virtual_disk\src\client\client_io.cpp(82): error C2143: syntax error: missing ';' before 'return'
+e:\work\dev\projects\virtual_disk\src\client\client_io.cpp(89): error C2001: newline in constant
+e:\work\dev\projects\virtual_disk\src\client\client_io.cpp(90): error C2143: syntax error: missing ';' before 'return'
+  client_parser.cpp
+e:\work\dev\projects\virtual_disk\src\client\client_parser.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\client\client_parser.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\client\client_parser.h(4): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\client\client_parser.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\client\client_parser.cpp(40): warning C4018: '<': signed/unsigned mismatch
+  cmd_base.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+  cmd_cd.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.h(4): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(18): warning C4267: 'argument': conversion from 'size_t' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(20): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(28): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(46): error C2001: newline in constant
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(47): error C2146: syntax error: missing ';' before identifier 'a_str_proc_resault'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(49): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(110): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(116): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(120): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(128): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cd.cpp(137): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_cls.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cls.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cls.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_cls.cpp(23): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_copy.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.h(4): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(21): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(28): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(35): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(47): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(63): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(71): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(85): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::begin': non-standard syntax; use '&' to create a pointer to member
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(88): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::c_str': non-standard syntax; use '&' to create a pointer to member
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(92): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(97): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::c_str': non-standard syntax; use '&' to create a pointer to member
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(101): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(116): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(121): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(125): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(135): error C2039: 'GetAvalSpace': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(138): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(146): warning C4244: 'argument': conversion from 'uint64' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(147): error C2001: newline in constant
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(148): error C2146: syntax error: missing ';' before identifier 'a_str_proc_resault'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(148): warning C4244: 'argument': conversion from 'uint64' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(149): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(159): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(164): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(168): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(182): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(193): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(206): error C2039: 'DelFile': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(212): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(220): error C2039: 'DelFile': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(226): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(232): warning C4244: '=': conversion from 'uint64' to 'uint32', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(238): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::c_str': non-standard syntax; use '&' to create a pointer to member
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(243): error C2039: 'DelFile': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(248): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(257): error C2039: 'DelFile': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(262): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(274): error C2039: 'DelFile': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(279): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(284): warning C4244: 'argument': conversion from 'uint64' to 'size_t', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.cpp(290): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_del.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(17): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(30): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(43): warning C4018: '<': signed/unsigned mismatch
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(54): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(63): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(68): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(72): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(80): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(84): error C2039: 'DelFile': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(88): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_del.cpp(94): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_dir.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp(18): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp(34): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp(41): error C3867: 'std::vector<std::string,std::allocator<_Ty>>::begin': non-standard syntax; use '&' to create a pointer to member
+          with
+          [
+              _Ty=std::string
+          ]
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp(56): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp(61): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp(65): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp(75): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp(86): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp(101): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_dir.cpp(132): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_exit.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_exit.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_exit.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_exit.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_exit.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_exit.cpp(22): error C2001: newline in constant
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_exit.cpp(23): error C2143: syntax error: missing ';' before 'do'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_exit.cpp(23): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_load.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_load.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_load.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_load.cpp(22): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_load.cpp(29): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_load.cpp(34): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_md.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.cpp(17): warning C4267: 'argument': conversion from 'size_t' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.cpp(18): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.cpp(25): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.cpp(37): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.cpp(51): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.cpp(56): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.cpp(60): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.cpp(74): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_md.cpp(81): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_mklink.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(17): warning C4267: 'argument': conversion from 'size_t' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(18): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(25): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(32): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(45): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(62): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(71): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(76): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(80): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(87): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(91): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(106): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_mklink.cpp(116): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_move.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(17): warning C4267: 'argument': conversion from 'size_t' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(18): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(25): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(32): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(44): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(62): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(71): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(76): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(80): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(89): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(93): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(101): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(112): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(116): error C2001: newline in constant
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(117): error C2146: syntax error: missing ';' before identifier 'a_str_proc_resault'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_move.cpp(120): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_ren.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(17): warning C4267: 'argument': conversion from 'size_t' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(18): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(25): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(32): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(45): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(61): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(70): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(75): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(79): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(85): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(89): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(96): error C2001: newline in constant
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(97): error C2146: syntax error: missing ';' before identifier 'a_str_proc_resault'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(98): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(106): error C2039: 'ReBuildCatelogCache': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(11): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(110): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(114): error C2001: newline in constant
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(115): error C2143: syntax error: missing ';' before 'do'
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_ren.cpp(115): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_save.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_save.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_save.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_save.cpp(22): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_save.cpp(29): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_save.cpp(34): warning C4244: 'argument': conversion from 'long' to 'char', possible loss of data
+  cmd_manager.cpp
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_manager.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_manager.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_manager.h(7): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_exit.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_manager.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_manager.cpp(11): error C2039: 'InitOver': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\cmd\cmd_manager.h(25): note: see declaration of 'CHandleFileSys'
+  handle_aval_disk.cpp
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h(4): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+  handle_catalog.cpp
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h(11): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(37): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(38): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(38): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(43): error C3927: '->': trailing return type is not allowed after a non-function declarator
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(43): error C3484: syntax error: expected '->' before the return type
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(43): error C3613: missing return type after '->' ('int' assumed)
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(43): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(43): error C2371: 'l_o_node': redefinition; different basic types
+  e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(42): note: see declaration of 'l_o_node'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(43): error C2146: syntax error: missing ';' before identifier 'm_i_id'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(45): error C3927: '->': trailing return type is not allowed after a non-function declarator
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(45): error C3484: syntax error: expected '->' before the return type
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(45): error C3613: missing return type after '->' ('int' assumed)
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(45): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(45): error C2146: syntax error: missing ';' before identifier 'insert'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(47): error C2059: syntax error: 'return'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(48): error C2059: syntax error: '}'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(48): error C2143: syntax error: missing ';' before '}'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(51): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(51): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(141): warning C4018: '<': signed/unsigned mismatch
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(313): error C3927: '->': trailing return type is not allowed after a non-function declarator
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(313): error C3484: syntax error: expected '->' before the return type
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(313): error C3613: missing return type after '->' ('int' assumed)
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(313): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(313): error C2146: syntax error: missing ';' before identifier 'erase'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(314): error C2059: syntax error: 'return'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(315): error C2059: syntax error: '}'
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.cpp(315): error C2143: syntax error: missing ';' before '}'
+  Generating Code...
+  Compiling...
+  handle_disk_mirror.cpp
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp(6): error C2614: 'CHandleDiskMirror': illegal member initialization: 'm_i_buff_size' is not a base or member
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp(8): error C2065: 'm_i_buff_size': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp(9): warning C4244: 'argument': conversion from 'uint64' to 'size_t', possible loss of data
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp(26): error C2065: 'm_i_disk_block': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp(33): warning C4244: 'argument': conversion from 'uint64' to 'size_t', possible loss of data
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp(35): error C2065: 'm_i_disk_block': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp(62): error C2065: 'm_i_buff_size': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp(64): error C2065: 'm_i_disk_block': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp(65): error C2065: 'm_i_disk_block': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.cpp(79): error C2447: '{': missing function header (old-style formal list?)
+  handle_file_sys.cpp
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h(8): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(63): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(136): error C2039: 'LoadFileSys': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h(26): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(138): error C2065: 'm_p_hdle_disk_mirror': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(143): error C2065: 'm_p_hdle_catelog': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(148): error C2065: 'm_p_hdle_aval_disk': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(153): error C2065: 'm_p_hdle_disk_mirror': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(153): error C2227: left of '->GetTotalDiskSpace' must point to class/struct/union/generic type
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(153): note: type is 'unknown-type'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(159): error C2065: 'm_p_hdle_disk_mirror': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(159): error C2227: left of '->LoadDiskMirror' must point to class/struct/union/generic type
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(159): note: type is 'unknown-type'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(164): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(164): error C2227: left of '->m_o_file_sys_info' must point to class/struct/union/generic type
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(164): error C2530: 'l_o_file_sys_info': references must be initialized
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(189): error C2065: 'm_p_hdle_aval_disk': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(189): error C2227: left of '->GetAvalDiskInfo' must point to class/struct/union/generic type
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(189): note: type is 'unknown-type'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(189): error C2530: 'l_o_aval_disk_info': references must be initialized
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(190): warning C4244: 'argument': conversion from 'uint64' to 'const uint32', possible loss of data
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(195): error C2065: 'm_p_hdle_aval_disk': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(195): error C2227: left of '->InitData' must point to class/struct/union/generic type
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(195): note: type is 'unknown-type'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(200): error C2065: 'm_p_hdle_aval_disk': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(200): error C2227: left of '->InitOver' must point to class/struct/union/generic type
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(200): note: type is 'unknown-type'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(212): error C2065: 'm_p_hdle_catelog': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(212): error C2227: left of '->GetMapCatalog' must point to class/struct/union/generic type
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(212): note: type is 'unknown-type'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(212): error C2530: 'l_map_catelog': references must be initialized
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(214): warning C4244: 'argument': conversion from 'uint64' to 'const uint32', possible loss of data
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(254): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(255): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(255): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(259): error C2059: syntax error: 'return'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(260): error C2059: syntax error: '}'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(260): error C2143: syntax error: missing ';' before '}'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(263): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(263): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(304): error C2039: 'CheckPathExist': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h(26): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(306): error C2065: 'm_p_hdle_catelog': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(312): error C2065: 'm_p_hdle_catelog': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(312): error C2227: left of '->GetNodeIdByFullName' must point to class/struct/union/generic type
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(312): note: type is 'unknown-type'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(317): error C2065: 'm_p_hdle_catelog': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(317): error C2227: left of '->GetCateNode' must point to class/struct/union/generic type
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(317): note: type is 'unknown-type'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(326): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(439): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(448): error C3927: '->': trailing return type is not allowed after a non-function declarator
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(448): error C3484: syntax error: expected '->' before the return type
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(448): error C3613: missing return type after '->' ('int' assumed)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(448): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(448): error C2146: syntax error: missing ';' before identifier 'pop_back'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(450): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(450): error C2440: 'initializing': cannot convert from 'const char [2]' to 'int'
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(450): note: There is no context in which this conversion is possible
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(451): error C2059: syntax error: 'for'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(451): error C2143: syntax error: missing ')' before ';'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(451): error C2143: syntax error: missing ';' before '<'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(451): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(451): error C2059: syntax error: '++'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(451): error C2059: syntax error: ')'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(452): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(452): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(457): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(458): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(458): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(462): error C2059: syntax error: 'return'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(463): error C2059: syntax error: '}'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(463): error C2143: syntax error: missing ';' before '}'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(474): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(474): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(490): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(491): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(491): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(495): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(496): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(496): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(501): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(503): error C2059: syntax error: '}'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(503): error C2143: syntax error: missing ';' before '}'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(506): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(507): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(507): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(511): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(512): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(512): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(517): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(518): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(518): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(522): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(524): error C2059: syntax error: '}'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(524): error C2143: syntax error: missing ';' before '}'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(528): error C2059: syntax error: '}'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(528): error C2143: syntax error: missing ';' before '}'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(530): error C2143: syntax error: missing ')' before ';'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(530): error C2143: syntax error: missing ';' before '<'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(530): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(530): error C2086: 'int i': redefinition
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(451): note: see declaration of 'i'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(530): error C2059: syntax error: '++'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(530): error C2059: syntax error: ')'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(531): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(531): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(553): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(554): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(554): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(560): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(561): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(561): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(565): error C2059: syntax error: 'if'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(566): error C2143: syntax error: missing ';' before '{'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(566): error C2447: '{': missing function header (old-style formal list?)
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(573): error C2065: 'a_str_full_name': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(573): error C2228: left of '.c_str' must have class/struct/union
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(573): note: type is 'unknown-type'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(573): error C2228: left of '.length' must have class/struct/union
+  e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(573): note: type is 'unknown-type'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(573): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(573): error C2365: 'memcpy': redefinition; previous definition was 'function'
+  e:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.14.26428\include\vcruntime_string.h(40): note: see declaration of 'memcpy'
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.cpp(573): fatal error C1003: error count exceeds 100; stopping compilation
+  start.cpp
+e:\work\dev\projects\virtual_disk\src\start\start.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\handle\handle_file_sys.h(8): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_catalog.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_aval_disk.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\handle\file_sys\handle_disk_mirror.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\serialize.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\start\start.h(4): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_manager.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_base.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_copy.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\cmd\cmd_generalize\cmd_exit.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\client\client_io.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\client\client_parser.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\start\start.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\start\start.cpp(14): error C2039: 'InitOver': is not a member of 'CHandleFileSys'
+  e:\work\dev\projects\virtual_disk\src\start\start.h(12): note: see declaration of 'CHandleFileSys'
+e:\work\dev\projects\virtual_disk\src\start\start.cpp(70): error C2001: newline in constant
+e:\work\dev\projects\virtual_disk\src\start\start.cpp(71): error C2143: syntax error: missing ';' before 'return'
+  date.cpp
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.cpp(9): error C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17134.0\ucrt\time.h(476): note: see declaration of 'ctime'
+e:\work\dev\projects\virtual_disk\src\tools\date.cpp(23): error C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17134.0\ucrt\time.h(476): note: see declaration of 'ctime'
+  deal_file.cpp
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h(10): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(15): error C2065: 'R_OK': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(15): error C2065: 'W_OK': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(15): error C2065: 'X_OK': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(15): error C2065: 'F_OK': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(20): error C2065: 'F_OK': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(22): error C2065: 'F_OK': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(28): error C4996: 'access': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _access. See online help for details.
+  d:\windows kits\10\include\10.0.17134.0\ucrt\corecrt_io.h(441): note: see declaration of 'access'
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(38): error C2065: 'F_OK': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(43): error C2065: 'R_OK': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(48): error C2065: 'W_OK': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(53): error C2065: 'X_OK': undeclared identifier
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(68): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(100): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: see declaration of 'fopen'
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(166): warning C4244: 'argument': conversion from 'uint64' to 'size_t', possible loss of data
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.cpp(208): warning C4244: 'argument': conversion from 'uint64' to 'size_t', possible loss of data
+  deal_string.cpp
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h(13): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.cpp(2): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.cpp(136): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17134.0\ucrt\string.h(133): note: see declaration of 'strcpy'
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.cpp(137): error C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17134.0\ucrt\string.h(440): note: see declaration of 'strtok'
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.cpp(141): error C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17134.0\ucrt\string.h(440): note: see declaration of 'strtok'
+  logger.cpp
+e:\work\dev\projects\virtual_disk\src\tools\logger.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\date.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\macro.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\pack_def.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\base\config.h(16): warning C4244: 'initializing': conversion from 'double' to 'uint64', possible loss of data
+e:\work\dev\projects\virtual_disk\src\base\base.h(6): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\base\env.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\deal_string.h(13): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\logger.h(8): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+e:\work\dev\projects\virtual_disk\src\tools\deal_file.h : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+e:\work\dev\projects\virtual_disk\src\tools\logger.cpp(1): warning C4103: alignment changed after including header, may be due to missing #pragma pack(pop)
+  Generating Code...

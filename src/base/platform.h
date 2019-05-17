@@ -2,12 +2,14 @@
 #ifndef __PLATFORM_H__
 #define __PLATFORM_H__
 
+#include <limits.h>
+
 #include <cstdlib>
 
 typedef signed char			int8;
 typedef signed short		int16;
 typedef signed int			int32;
-typedef __int64				int64;
+typedef long long			int64;
 
 typedef unsigned char		uint8;
 typedef unsigned short		uint16;
@@ -21,7 +23,7 @@ typedef unsigned int		uint;
 typedef uint8				byte;
 
 
-#define NULL                (nullptr)
+//#define NULL                (nullptr)
 
 
 

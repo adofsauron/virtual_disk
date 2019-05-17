@@ -8,7 +8,7 @@ bool CSerialize::UnPackFileSysInfo(byte* a_p_space, const uint32 a_i_size,  SFil
 		return false;
 	}
 
-	if (0 <= a_i_size)
+	if (0 >= a_i_size)
 	{
 		return false;
 	}
@@ -30,7 +30,7 @@ bool CSerialize::UnPackAvalDiskInfo(byte* a_p_space, const uint32 a_i_size,  SAv
 		return false;
 	}
 
-	if (0 <= a_i_size)
+	if (0 >= a_i_size)
 	{
 		return false;
 	}
@@ -45,14 +45,14 @@ bool CSerialize::UnPackAvalDiskInfo(byte* a_p_space, const uint32 a_i_size,  SAv
 }
 
 // 反序列化目录树节点
-bool CSerialize::UnPackCatelog(byte* a_p_space, const uint32 a_i_size,  const uint32 a_i_cate_node_num , std::map<uint32, SCateNode>& a_map_catalog)
+bool CSerialize::UnPackCatelog(byte* a_p_space, const uint32 a_i_size,  const uint32 a_i_cate_node_num , std::unordered_map<uint32, SCateNode>& a_map_catalog)
 {
 	if (NULL == a_p_space)
 	{
 		return false;
 	}
 
-	if (0 <= a_i_size)
+	if (0 >= a_i_size)
 	{
 		return false;
 	}
@@ -95,24 +95,35 @@ bool CSerialize::UnPackCatelog(byte* a_p_space, const uint32 a_i_size,  const ui
 }
 
 // 序列化文件系统信息
-bool CSerialize::PackFileSysInfo(byte* a_p_space, const uint32 a_i_size, const  SFileSysInfo& a_o_file_sys_info)
+bool CSerialize::PackFileSysInfo(byte* a_p_space, const uint32 a_i_size, const SFileSysInfo& a_o_file_sys_info)
 {
 	if (NULL == a_p_space)
 	{
+		LOG_ERR("a_p_space null");
 		return false;
 	}
 
-	if (0 <= a_i_size)
+	if (0 >= a_i_size)
 	{
+		LOG_ERR("a_i_size error");
 		return false;
 	}
 
 	if (MCRO_STRUCT_SIZE(SFileSysInfo) > a_i_size)
 	{
+		 std::cout<< "PackFileSysInfo err: size err, MCRO_STRUCT_SIZE(SFileSysInfo):" 
+		 	<<MCRO_STRUCT_SIZE(SFileSysInfo) << ", a_i_size:"<<a_i_size << std::endl;
 		return false;
 	}
 
 	memcpy(a_p_space, &a_o_file_sys_info, MCRO_STRUCT_SIZE(SFileSysInfo));	
+
+	SFileSysInfo l_o_info;
+	memcpy(&l_o_info, a_p_space, MCRO_STRUCT_SIZE(SFileSysInfo));
+	std::string log;
+	CHandleFileSys::PrintSFileSysInfo(l_o_info, log);
+	LOG_RECORD(LOG_INFO, log);
+
 	return true;
 }
 
@@ -124,7 +135,7 @@ bool CSerialize::PackAvalDiskInfo(byte* a_p_space, const uint32 a_i_size, const 
 		return false;
 	}
 
-	if (0 <= a_i_size)
+	if (0 >= a_i_size)
 	{
 		return false;
 	}
@@ -134,45 +145,48 @@ bool CSerialize::PackAvalDiskInfo(byte* a_p_space, const uint32 a_i_size, const 
 		return false;
 	}
 
-	memcpy(a_p_space, &a_o_aval_disk_info, MCRO_STRUCT_SIZE(SAvalDiskInfo));	
+	memcpy(a_p_space, &a_o_aval_disk_info, MCRO_STRUCT_SIZE(SAvalDiskInfo));
+
 	return true;
 }
 
 // 序列化目录树节点
-bool CSerialize::PackCatelog(byte* a_p_space, const uint32 a_i_size, const std::map<uint32, SCateNode>& a_map_catalog)
+bool CSerialize::PackCatelog(byte* a_p_space, const uint32 a_i_size, const std::unordered_map<uint32, SCateNode>& a_map_catalog)
 {
 	if (NULL == a_p_space)
 	{
 		return false;
 	}
 
-	if (0 <= a_i_size)
+	if (0 >= a_i_size)
 	{
 		return false;
 	}
 
-	if (!a_map_catalog.empty())
+	if (a_map_catalog.empty())
 	{
+		LOG_ERR("a_map_catalog.empty()");
 		return false;
 	}
 
 	// 检测空间容量
 	uint32 l_i_catalog_total_size = 0;
-	std::map<uint32, SCateNode>::const_iterator l_iter = a_map_catalog.begin();
-	for (; l_iter != a_map_catalog.end(); l_iter) 
+	std::unordered_map<uint32, SCateNode>::const_iterator l_iter = a_map_catalog.begin();
+	for (; l_iter != a_map_catalog.end(); ++l_iter) 
 	{
 		l_i_catalog_total_size += MACRO_CATE_NODE_SIZE(l_iter->second);
 	}
 
 	if (l_i_catalog_total_size > a_i_size)
 	{
+		LOG_ERR("l_i_catalog_total_size > a_i_size");
 		return false;
 	}
 
 	// 执行内存拷贝
 	uint64 l_i_index = 0;
-	std::map<uint32, SCateNode>::const_iterator l_iter = a_map_catalog.begin();
-	for (; l_iter != a_map_catalog.end(); l_iter) 
+	l_iter = a_map_catalog.begin();
+	for (; l_iter != a_map_catalog.end(); ++l_iter) 
 	{
 		const SCateNode& l_o_node = l_iter->second;
 

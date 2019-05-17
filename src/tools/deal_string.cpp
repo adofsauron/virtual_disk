@@ -129,3 +129,21 @@ char* CDealString::ConvertToLower(char* pstr, int len)
     return pstr;
 }
 
+std::vector<std::string>& CDealString::SplitString(const std::string& str,const std::string& pattern, std::vector<std::string>& resultVec)
+{
+    std::string::size_type pos1, pos2;
+    pos2 = str.find(pattern);
+    pos1 = 0;
+    while(std::string::npos != pos2)
+    {
+        resultVec.push_back(str.substr(pos1, pos2-pos1));
+         
+        pos1 = pos2 + pattern.size();
+        pos2 = str.find(pattern, pos1);
+    }
+
+    if(pos1 != str.length())
+        resultVec.push_back(str.substr(pos1));
+
+    return resultVec;
+}

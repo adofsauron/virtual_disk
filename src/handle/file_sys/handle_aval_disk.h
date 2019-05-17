@@ -6,15 +6,21 @@
 class CHandleAvalDisk
 {
 public:
-    // 必须显式指定可用磁盘信息,没有资源释放,不创建析构函数
-    explicit CHandleAvalDisk(byte* l_p_aval_disk_space);
+    explicit CHandleAvalDisk();
+    ~CHandleAvalDisk();
 
 public:
-    // 是否初始化完成
+    // 是否初始化完成, 必须initData后方可使用
     inline bool InitOver() {return m_b_init_over;};
 
-    // 初始化磁盘管理信息
-    void InitAvalDiskInfo();
+    // 初始化磁盘管理信息,只能在创建磁盘文件系统时使用
+    const SAvalDiskInfo& InitAvalDiskInfo();
+    
+    // 成员数据初始化
+    bool InitData(byte* l_p_aval_disk_space, const SAvalDiskInfo& a_o_aval_disk_info);
+
+    // 清理数据
+    void ClearData();
 
 public:
     // 获取指定空间
@@ -27,13 +33,22 @@ public:
     // intpu：a_i_size  删除空间的大小
     bool ReleaseSpace(const uint64 a_i_index, const uint32 a_i_size);
 
+    // 获得可用的空间大小
+    bool GetAvalSpace(uint64& l_i_aval_space);
+
+    // 获得可用空间的首地址
+    inline byte* GetAvalSpacePtr() { return  m_p_aval_disk_space;};
+
 public:
     // 获取可用磁盘信息
-    inline SAvalDiskInfo& GetAvalDiskInfo() { return m_o_aval_disk_info;};
+    inline SAvalDiskInfo& GetAvalDiskInfo() { return m_o_aval_disk_info;};  
+
+private:
+    // 设置可用磁盘空间的首地址
+    bool SetAvalDiskSpace(byte* l_p_aval_disk_space);
 
     // 设置可用磁盘信息
-    // return: 设置后的成员变量可用磁盘信息
-    SAvalDiskInfo& SetAvalDiskInfo(SAvalDiskInfo& a_o_aval_disk_info);
+    bool SetAvalDiskInfo(const SAvalDiskInfo& a_o_aval_disk_info);
 
 private:
     byte*               m_p_aval_disk_space;    // 可用磁盘空间的首地址

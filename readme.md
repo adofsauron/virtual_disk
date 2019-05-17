@@ -12,6 +12,3 @@
 - handle:   底层处理类
 - start:    启动入口管理目录
 - gtest:    测试文件目录
-### debug: 运行相关目录
-- log: 		日志目录
-- mirror： 	磁盘镜像存放目录

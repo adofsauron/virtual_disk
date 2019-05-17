@@ -20,6 +20,9 @@ private:
 	CDealString& operator = (const CDealString&);
 
 public:
+	//--------------------------------------------------------
+	// c风格的处理
+
 	// 是否是中文
 	// return 1:ok, 0:false
 	static int IsZhCh(char a_c_char);
@@ -42,6 +45,12 @@ public:
 
 	// 转换为小写
 	static char* ConvertToLower(char* buff, int len);
+
+	//--------------------------------------------------------
+	// c++风格的处理
+	
+	// 分隔字符串 
+	static std::vector<std::string>& SplitString(const std::string& str,const std::string& pattern, std::vector<std::string>& resultVec);
 
 };
 

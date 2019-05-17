@@ -1,13 +1,28 @@
 
 #include "date.h"
 
+std::string CDate::m_str_date = "";
+
 const std::string& CDate::GetCTime()
 {
-    static std::string l_str_date;
-	l_str_date.clear();
+	m_str_date.clear();
 	time_t seconds;
 	seconds = time(NULL);
-	l_str_date = ctime(&seconds);
-    l_str_date.replace(l_str_date.find("\n"),1,"" );
-	return l_str_date;
+	m_str_date = ctime(&seconds);
+    m_str_date.replace(m_str_date.find("\n"),1,"" );
+	return m_str_date;
+}
+
+uint32 CDate::GetUnixTime()
+{
+	return (uint32) time(NULL);
+}
+
+const std::string& CDate::GetCTimeByUnixTime(const uint32 a_o_time)
+{
+	m_str_date.clear();
+	time_t seconds = a_o_time;
+	m_str_date = ctime(&seconds);
+    m_str_date.replace(m_str_date.find("\n"),1,"" );
+	return m_str_date;
 }

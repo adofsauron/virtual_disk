@@ -11,25 +11,28 @@
     <Filter Include="tools">
       <UniqueIdentifier>{f07115ee-0419-4a8d-a3bb-adb7dbfb8896}</UniqueIdentifier>
     </Filter>
-    <Filter Include="event">
-      <UniqueIdentifier>{32045bf0-56de-49c4-85a8-35a5ee13966d}</UniqueIdentifier>
+    <Filter Include="client">
+      <UniqueIdentifier>{4f55a87a-8873-4742-be30-bee526cacc05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmd">
+      <UniqueIdentifier>{0db4def6-cb74-4d89-993d-0f164d299d1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="handle">
+      <UniqueIdentifier>{dbc59444-7b47-41f3-a755-ce32cecbb0b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmd\cmd_generalize">
+      <UniqueIdentifier>{967f860d-41a8-477f-8112-3cc0c9c5f4fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="start">
+      <UniqueIdentifier>{4881e233-50bf-4091-b0fe-94547077ccae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="handle\file_sys">
+      <UniqueIdentifier>{54290cd3-f3de-4269-83fd-0385d094217d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\tools\proc_string.h">
-      <Filter>tools</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\base\platform.h">
       <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\tools\config.h">
-      <Filter>tools</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\base\thread.h">
-      <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\tools\logger.h">
-      <Filter>tools</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\base\pack_def.h">
       <Filter>base</Filter>
@@ -43,10 +46,190 @@
     <ClInclude Include="..\..\src\tools\date.h">
       <Filter>tools</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\base\base.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\base\cmd_def.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\base\config.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\base\env.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\base\errno.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\client\client_cmd_adaptor.h">
+      <Filter>client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\client\client_io.h">
+      <Filter>client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\client\client_parser.h">
+      <Filter>client</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tools\deal_file.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tools\deal_string.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tools\logger.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\handle\handle_file_sys.h">
+      <Filter>handle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\handle\file_sys\handle_aval_disk.h">
+      <Filter>handle\file_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\handle\file_sys\handle_catalog.h">
+      <Filter>handle\file_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\handle\file_sys\handle_disk_mirror.h">
+      <Filter>handle\file_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\start\start.h">
+      <Filter>start</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_base.h">
+      <Filter>cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_manager.h">
+      <Filter>cmd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_cd.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_cls.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_copy.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_del.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_dir.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_exit.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_load.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_md.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_mklink.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_move.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_rd.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_ren.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_save.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\base\thread.cpp">
+    <ClCompile Include="..\..\src\base\env.cpp">
       <Filter>base</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\base\errno.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\client\client_cmd_adaptor.cpp">
+      <Filter>client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\client\client_io.cpp">
+      <Filter>client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\client\client_parser.cpp">
+      <Filter>client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tools\date.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tools\deal_file.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tools\deal_string.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tools\logger.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tools\serialize.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\handle\handle_file_sys.cpp">
+      <Filter>handle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\handle\file_sys\handle_aval_disk.cpp">
+      <Filter>handle\file_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\handle\file_sys\handle_catalog.cpp">
+      <Filter>handle\file_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\handle\file_sys\handle_disk_mirror.cpp">
+      <Filter>handle\file_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\start\start.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_base.cpp">
+      <Filter>cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_manager.cpp">
+      <Filter>cmd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_cd.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_cls.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_copy.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_del.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_dir.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_exit.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_load.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_md.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_mklink.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_move.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_ren.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_save.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\readme.md" />
   </ItemGroup>
 </Project>

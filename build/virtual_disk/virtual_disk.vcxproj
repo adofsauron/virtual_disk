@@ -65,18 +65,76 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\base\base.h" />
+    <ClInclude Include="..\..\src\base\cmd_def.h" />
+    <ClInclude Include="..\..\src\base\config.h" />
+    <ClInclude Include="..\..\src\base\env.h" />
+    <ClInclude Include="..\..\src\base\errno.h" />
     <ClInclude Include="..\..\src\base\macro.h" />
     <ClInclude Include="..\..\src\base\pack_def.h" />
     <ClInclude Include="..\..\src\base\platform.h" />
-    <ClInclude Include="..\..\src\base\thread.h" />
-    <ClInclude Include="..\..\src\tools\config.h" />
+    <ClInclude Include="..\..\src\client\client_cmd_adaptor.h" />
+    <ClInclude Include="..\..\src\client\client_io.h" />
+    <ClInclude Include="..\..\src\client\client_parser.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_base.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_cd.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_cls.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_copy.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_del.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_dir.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_exit.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_load.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_md.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_mklink.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_move.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_rd.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_ren.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_save.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_manager.h" />
+    <ClInclude Include="..\..\src\handle\file_sys\handle_aval_disk.h" />
+    <ClInclude Include="..\..\src\handle\file_sys\handle_catalog.h" />
+    <ClInclude Include="..\..\src\handle\file_sys\handle_disk_mirror.h" />
+    <ClInclude Include="..\..\src\handle\handle_file_sys.h" />
+    <ClInclude Include="..\..\src\start\start.h" />
     <ClInclude Include="..\..\src\tools\date.h" />
+    <ClInclude Include="..\..\src\tools\deal_file.h" />
+    <ClInclude Include="..\..\src\tools\deal_string.h" />
     <ClInclude Include="..\..\src\tools\logger.h" />
-    <ClInclude Include="..\..\src\tools\proc_string.h" />
     <ClInclude Include="..\..\src\tools\serialize.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\base\thread.cpp" />
+    <ClCompile Include="..\..\src\base\env.cpp" />
+    <ClCompile Include="..\..\src\base\errno.cpp" />
+    <ClCompile Include="..\..\src\client\client_cmd_adaptor.cpp" />
+    <ClCompile Include="..\..\src\client\client_io.cpp" />
+    <ClCompile Include="..\..\src\client\client_parser.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_base.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_cd.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_cls.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_copy.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_del.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_dir.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_exit.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_load.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_md.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_mklink.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_move.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_ren.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_save.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_manager.cpp" />
+    <ClCompile Include="..\..\src\handle\file_sys\handle_aval_disk.cpp" />
+    <ClCompile Include="..\..\src\handle\file_sys\handle_catalog.cpp" />
+    <ClCompile Include="..\..\src\handle\file_sys\handle_disk_mirror.cpp" />
+    <ClCompile Include="..\..\src\handle\handle_file_sys.cpp" />
+    <ClCompile Include="..\..\src\start\start.cpp" />
+    <ClCompile Include="..\..\src\tools\date.cpp" />
+    <ClCompile Include="..\..\src\tools\deal_file.cpp" />
+    <ClCompile Include="..\..\src\tools\deal_string.cpp" />
+    <ClCompile Include="..\..\src\tools\logger.cpp" />
+    <ClCompile Include="..\..\src\tools\serialize.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

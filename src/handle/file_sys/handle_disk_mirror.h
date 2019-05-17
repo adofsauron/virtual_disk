@@ -25,6 +25,9 @@ public:
     // 判断镜像文件是否存在
     bool CheckDiskMirrorExist();
 
+    // 清空数据
+    void ClearData();
+
 public:
     // 获取整个磁盘的空间首地址
     inline byte* GetTotalDiskSpace() {return m_p_total_disk;};
@@ -36,7 +39,7 @@ private:
     const char* m_p_disk_mirror_name;           // 磁盘镜像名字
     uint64 m_i_total_disk_size;                 // 总磁盘空间大小
     uint64 m_i_disk_block;                      // 磁盘块大小
-    uint64 m_i_buff_size;                       // 加载到内存的buff大小
+    const uint64 m_i_buff_size;                 // 加载到内存的buff大小
 };
 
 #endif//__HANDLE_DISK_MIRROR_H__
