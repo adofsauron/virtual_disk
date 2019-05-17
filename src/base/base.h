@@ -11,5 +11,4 @@
 #include "env.h"
 #include "../tools/logger.h"
 
-
 #endif//__BASE_H__

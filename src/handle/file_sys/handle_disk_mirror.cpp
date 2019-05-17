@@ -156,3 +156,4 @@ bool CHandleDiskMirror::CheckDiskMirrorExist()
 
     return CDealFile::CheckFileExist(m_p_disk_mirror_name);
 }
+
