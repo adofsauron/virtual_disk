@@ -12,7 +12,7 @@ bool CCmdMklink::CheckFeasibility(const std::vector<std::string>& a_vec_args, st
         a_str_proc_resault = "参数不是2个:";
 
          char buff[256] = {0x00};
-        snprintf(buff, 256, "%u", a_vec_args.size());
+        snprintf(buff, 256, "%lu", a_vec_args.size());
 
         a_str_proc_resault += buff;
         LOG_RECORD(LOG_ERR,a_str_proc_resault);

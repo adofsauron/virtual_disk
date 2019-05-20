@@ -22,7 +22,7 @@ bool CClientParser::CheckSpecChar(const char a_chr)
     const static char spec[] = { '?', '*', ':', ':', '/', '\\', ' ', '@', '.', '_'};
 
     // TODO: 第二版改成unorder_map的方式，用哈希表加快查找速度
-    for (int i = 0; i < sizeof(spec); ++i)
+    for (uint32 i = 0; i < sizeof(spec); ++i)
     {
         if (spec[i] == a_chr)
         {
@@ -37,7 +37,7 @@ bool CClientParser::CheckSpecChar(const char a_chr)
 bool CClientParser::CheckSpecChar(const std::string& a_str_input)
 {
     bool l_b_aval = true;
-    for (int i=0; i<a_str_input.length(); ++i)
+    for (uint32 i=0; i<a_str_input.length(); ++i)
     {
         if (! CheckSpecChar(a_str_input[i]))
         {

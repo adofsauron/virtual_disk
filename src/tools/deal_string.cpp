@@ -14,7 +14,7 @@ int CDealString::IsSpecChar(char a_c_char)
 {
     int l_i_find = 0;
     const static char spec[] = { '?', '*', ':', ':', '/', '\\', ' ', '@', '.', '_'};
-    for (int i = 0; i<sizeof(spec); ++i)
+    for (uint32 i = 0; i<sizeof(spec); ++i)
     {
         if (spec[i] == a_c_char)
         {
@@ -51,7 +51,7 @@ bool CDealString::CheckStringAvail(char* pstr, int len, char& err_char)
 char* CDealString::StringReplace(char* str, int len, const char* oldstr, const char* newstr)
 {
     char* bstr = (char*)malloc(len + 1);
-    memset(bstr, 0x00, sizeof(bstr));
+    memset(bstr, 0x00, sizeof(char) * (len + 1));
 
     for (int i = 0; i < len; ++i)
     {
@@ -74,8 +74,6 @@ char* CDealString::StringReplace(char* str, int len, const char* oldstr, const c
 // 合并重复字符
 char* CDealString::CombineChar(char* pstr, int len, char a_c_char)
 {
-    bool lb_first = true;
-
     char* buff = (char*)malloc(len + 1);
     memset(buff, 0x00, len+1);
     int lindex = 0;

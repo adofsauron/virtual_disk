@@ -71,12 +71,12 @@ bool CSerialize::UnPackCatelog(byte* a_p_space, const uint32 a_i_size,  const ui
 	a_map_catalog.clear();
 
 	uint64 l_i_index = 0;
-	for (int i = 0; i < a_i_cate_node_num; ++i)
+	for (uint32 i = 0; i < a_i_cate_node_num; ++i)
 	{
 		SCateNode l_o_node; // 注意内存空间开辟的时机
-		memset(&l_o_node, 0x00, MCRO_STRUCT_SIZE(SCateNode));
-		memcpy(&l_o_node, a_p_space + l_i_index, MCRO_STRUCT_SIZE(SCateNode));
-		l_i_index += MCRO_STRUCT_SIZE(SCateNode);
+		memset(&l_o_node, 0x00, MCRO_STRUCT_SIZE(l_o_node));
+		memcpy(&l_o_node, a_p_space + l_i_index, MCRO_STRUCT_SIZE(l_o_node));
+		l_i_index += MCRO_STRUCT_SIZE(l_o_node);
 
 		l_o_node.m_p_son_set = NULL; // 注意声明周期,数组根据结构体,所以此处不可有所指向指向
 

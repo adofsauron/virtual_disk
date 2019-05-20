@@ -41,7 +41,7 @@ bool CHandleCatelog::AddCateNode(uint32& a_i_new_node_id)
     }
     
     SCateNode& l_o_node = m_map_catalog[l_i_nid];
-    memset(&l_o_node, 0x00, MCRO_STRUCT_SIZE(SCateNode));
+    memset(&l_o_node, 0x00, MCRO_STRUCT_SIZE(l_o_node));
 
     l_o_node.m_i_id = l_i_nid;
     l_o_node.m_i_son_num = 0;
@@ -146,7 +146,7 @@ bool CHandleCatelog::FatherAddSonId(const uint32 a_i_fid, const uint32 a_i_sid)
         return false;
     }
 
-    for (int i=0; i<l_o_father_node.m_i_son_num; ++i)
+    for (uint32 i=0; i<l_o_father_node.m_i_son_num; ++i)
     {
         if (a_i_sid == l_o_father_node.m_p_son_set[i]) // 该节点已存在
         {

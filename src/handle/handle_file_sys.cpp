@@ -208,8 +208,8 @@ bool CHandleFileSys::LoadFileSys()
     // 解析出的数据错误, TODO: 只有数据越界的时候才能检测出,如果里边是脏数据,就检测不出了
     if ((0 >= l_o_file_sys_info.m_i_disk_total_size) || (config::CONST_MAX_SIZE_DISK_TOTAL < l_o_file_sys_info.m_i_disk_total_size))
     {
-        char buff[1024] = {0x00};
-        snprintf(buff, 1024, "disk size check err:%llu", l_o_file_sys_info.m_i_disk_total_size);
+        char buff[2048] = {0x00};
+        snprintf(buff, 2048, "disk size check err:%llu", l_o_file_sys_info.m_i_disk_total_size);
         std::string log = buff;
         LOG_RECORD(LOG_ERR, log);
         return false;
@@ -601,7 +601,7 @@ bool CHandleFileSys::AddNewFile(const std::string& a_str_full_name, const ENUM_C
         return false;
     }
 
-    for (int i=0; i<l_p_node->m_i_son_num;++i)
+    for (uint32 i=0; i<l_p_node->m_i_son_num;++i)
     {
         uint32 l_i_sid = l_p_node->m_p_son_set[i];
         SCateNode* l_p_snode = NULL;
@@ -985,10 +985,10 @@ bool CHandleFileSys::CollectDirTotal(const std::string& a_str_full_name, std::ma
 
 bool CHandleFileSys::PrintNode(const SCateNode* a_p_node, std::string& a_str_info)
 {
-    char l_p_buff[1024] = {0x00};
+    char l_p_buff[2048] = {0x00};
     if (CNODE_INVIAL == a_p_node->m_i_type)
     {
-        snprintf(l_p_buff, 1024, "node invail: nid[%d], name:[%s]", a_p_node->m_i_id, a_p_node->m_p_name);
+        snprintf(l_p_buff, 2048, "node invail: nid[%d], name:[%s]", a_p_node->m_i_id, a_p_node->m_p_name);
         a_str_info = l_p_buff;
         return false;
     }
@@ -1026,7 +1026,8 @@ bool CHandleFileSys::PrintNode(const SCateNode* a_p_node, std::string& a_str_inf
     l_str_acess += (a_p_node->m_i_access & 1) == 1 ? "x" : "-";
 
     // 模仿linux输出格式
-    snprintf(l_p_buff, 1024, "type[%s]\taccess[%s]\tsize:%d\tupate_time[%s]\tname:{[%s]|[%s]}", 
+    memset(l_p_buff, 0x00, sizeof(l_p_buff));
+    snprintf(l_p_buff, 2048, "type[%s]\taccess[%s]\tsize:%d\tupate_time[%s]\tname:{[%s]|[%s]}", 
         l_chr_type, l_str_acess.c_str(), a_p_node->m_i_file_size, l_str_update_time.c_str(), a_p_node->m_p_full_name, a_p_node->m_p_name);
 
 
@@ -1188,8 +1189,8 @@ bool CHandleFileSys::SaveFileSys()
 
 void CHandleFileSys::PrintSFileSysInfo(const SFileSysInfo& a_o_info, std::string& a_str_log)
 {
-	char buff[1024] = {0x00};
-	snprintf(buff, 1024, 
+	char buff[2048] = {0x00};
+	snprintf(buff, 2048, 
 		"\n m_i_disk_total_size:%llu\n m_i_aval_disk_info_index:%llu\n m_i_catelog_space_index:%llu\n m_i_cate_node_num:%llu\n m_i_aval_disk_space_index:%llu\n m_i_disk_block_size:%llu\n",
 		a_o_info.m_i_disk_total_size, a_o_info.m_i_aval_disk_info_index, a_o_info.m_i_catelog_space_index, a_o_info.m_i_cate_node_num,
 		a_o_info.m_i_aval_disk_space_index, a_o_info.m_i_disk_block_size
