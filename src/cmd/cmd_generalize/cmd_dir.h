@@ -1,8 +1,10 @@
 #ifndef __CMD_DIR_H__
 #define __CMD_DIR_H__
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <map>
 
 #include "../cmd_base.h"
 
@@ -12,7 +14,6 @@ class CCmdDir : public CCmdBase
 {
 public:
     explicit CCmdDir(CHandleFileSys* l_p_handle_file_sys);
-    ~CCmdDir();
 
 public:
     virtual bool CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault);

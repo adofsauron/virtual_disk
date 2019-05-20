@@ -5,10 +5,6 @@ CCmdMove::CCmdMove(CHandleFileSys* l_p_handle_file_sys)
 {
 }
 
-CCmdMove::~CCmdMove()
-{
-}
-
 bool CCmdMove::CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault)
 {
     if (2 != a_vec_args.size())
@@ -72,8 +68,8 @@ bool CCmdMove::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
         return false;
     }
 
-    SCateNode l_o_src_cata_node;
-    if (!m_p_handle_file_sys->CheckPathExist(l_str_full_name, l_o_src_cata_node))
+    SCateNode* l_p_src_cata_node;
+    if (!m_p_handle_file_sys->CheckPathExist(l_str_full_name, l_p_src_cata_node))
     {
         a_str_proc_resault = "源文件不存在,不可移动:";
         a_str_proc_resault += l_str_full_name;
@@ -82,11 +78,11 @@ bool CCmdMove::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
     }
 
 
-    const uint32 l_i_src_id = l_o_src_cata_node.m_i_id;
-    const uint32 l_i_src_father_id = l_o_src_cata_node.m_i_parent_id;
+    const uint32 l_i_src_id = l_p_src_cata_node->m_i_id;
+    const uint32 l_i_src_father_id = l_p_src_cata_node->m_i_parent_id;
 
-    SCateNode l_o_to_cata_node;
-    if (!m_p_handle_file_sys->CheckPathExist(l_str_to_full_name, l_o_to_cata_node))
+    SCateNode* l_p_to_cata_node;
+    if (!m_p_handle_file_sys->CheckPathExist(l_str_to_full_name, l_p_to_cata_node))
     {
         a_str_proc_resault = "目标文件夹不存在,不可移动:";
         a_str_proc_resault += l_str_to_full_name;
@@ -94,7 +90,7 @@ bool CCmdMove::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
         return false;
     }
 
-    if (CNODE_DIR != l_o_to_cata_node.m_i_type)
+    if (CNODE_DIR != l_p_to_cata_node->m_i_type)
     {
         a_str_proc_resault = "目标文件不是文件夹,不可移动:";
         a_str_proc_resault += l_str_to_full_name;
@@ -103,7 +99,7 @@ bool CCmdMove::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
     }
 
 
-    const uint32 l_i_new_father_id = l_o_to_cata_node.m_i_id;
+    const uint32 l_i_new_father_id = l_p_to_cata_node->m_i_id;
 
     if (!m_p_handle_file_sys->MoveNode(l_i_src_id, l_i_src_father_id, l_i_new_father_id))
     {

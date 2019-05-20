@@ -52,6 +52,8 @@ void CClientIO::StartInput()
             continue;
         }
 
+        // 输出处理结果
+        std::cout << m_str_output << std::endl;
     }
 
     LOG_RECORD(LOG_INFO, "StartInput over");

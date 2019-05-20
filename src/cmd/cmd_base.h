@@ -14,7 +14,6 @@ class CCmdBase
 {
 public:
     CCmdBase(const std::string& l_str_cmd_name, CHandleFileSys* l_p_handle_file_sys);
-    virtual ~CCmdBase();
 
 public:
     

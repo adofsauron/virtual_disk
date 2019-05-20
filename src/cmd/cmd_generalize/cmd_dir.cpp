@@ -5,10 +5,6 @@ CCmdDir::CCmdDir(CHandleFileSys* l_p_handle_file_sys)
 {
 }
 
-CCmdDir::~CCmdDir()
-{
-}
-
 bool CCmdDir::CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault)
 {
     if (2 > a_vec_args.size())
@@ -32,6 +28,7 @@ bool CCmdDir::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
         a_str_proc_resault = "命令参数错误:";
         a_str_proc_resault += l_str_param;
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
+        LOG_ERR(l_str_param);
         return false;
     }
 
@@ -40,7 +37,7 @@ bool CCmdDir::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
     std::vector<std::string> l_vec_path = a_vec_args;
     l_vec_path.erase(l_vec_path.begin()); // 去除第一个
 
-    std::unordered_map<std::string, std::vector<uint32> > l_unordered_map_path;
+    std::map<std::string, std::vector<uint32> > l_map_path;
 
     for (uint32 i=0; i<l_vec_path.size(); ++i)
     {
@@ -60,10 +57,8 @@ bool CCmdDir::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
             return false;
         }
 
-        LOG_RECORD(LOG_INFO, l_str_src_full_name);
-
-        SCateNode l_o_src_cata_node;
-        if (! m_p_handle_file_sys->CheckPathExist(l_str_src_full_name, l_o_src_cata_node))
+        SCateNode* l_p_src_cata_node;
+        if (! m_p_handle_file_sys->CheckPathExist(l_str_src_full_name, l_p_src_cata_node))
         {
             a_str_proc_resault = "路径不存在:";
             a_str_proc_resault += l_str_src_full_name;
@@ -73,7 +68,7 @@ bool CCmdDir::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
 
         if (l_b_all)
         {
-            if (! m_p_handle_file_sys->CollectDirTotal(l_str_src_full_name, l_unordered_map_path))
+            if (! m_p_handle_file_sys->CollectDirTotal(l_str_src_full_name, l_map_path))
             {
                 a_str_proc_resault = "收集总子节点信息失败:";
                 a_str_proc_resault += l_str_src_full_name;
@@ -92,28 +87,26 @@ bool CCmdDir::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
                 return false;
             }
 
-            if (!l_vec_path.empty())
+            if (! l_vec_path.empty())
             {
-                l_unordered_map_path.insert(std::make_pair(l_str_src_full_name, l_vec_path));
+                l_map_path.insert(std::make_pair(l_str_src_full_name, l_vec_path));
             }
         }
     }
 
-
-    if (l_unordered_map_path.empty())
+    if (l_map_path.empty())
     {
         a_str_proc_resault = "文件夹为空";
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return true;
     }
 
-
     // 以下为有文件的情况
 
-    a_str_proc_resault = "输出如下:\n";
-    std::unordered_map<std::string, std::vector<uint32> >::const_iterator l_iter = l_unordered_map_path.begin();
+    a_str_proc_resault = "files : \n";
+    std::map<std::string, std::vector<uint32> >::const_iterator l_iter = l_map_path.begin();
 
-    for (;l_iter != l_unordered_map_path.end(); ++l_iter)
+    for (;l_iter != l_map_path.end(); ++l_iter)
     {
         const std::string& l_str_full_name = l_iter->first;
         const std::vector<uint32> l_vec_son = l_iter->second;
@@ -134,8 +127,9 @@ bool CCmdDir::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
         
         }
 
+        a_str_proc_resault += "\n====================================\n";
     }
 
-    LOG_RECORD(LOG_DEBUG,a_str_proc_resault);
+    //LOG_RECORD(LOG_DEBUG, a_str_proc_resault);
     return true;
 }

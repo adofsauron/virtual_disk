@@ -48,12 +48,20 @@ CStartClass::CStartClass()
 
 CStartClass::~CStartClass()
 {    
-    DELETE_PTR(m_p_hdle_file_sys);
     DELETE_PTR(m_p_cmd_manager);
-    DELETE_PTR(m_p_client_cmd_adaptor);
+    LOG_INFO("delete m_p_cmd_manager over");
+
     DELETE_PTR(m_p_client_io);
+    LOG_INFO("delete m_p_client_io over");
+
+    DELETE_PTR(m_p_client_cmd_adaptor);   
+    LOG_INFO("delete m_p_client_cmd_adaptor over");
+
+    DELETE_PTR(m_p_hdle_file_sys);
+    LOG_INFO("delete m_p_hdle_file_sys over");
     
     CLogger::ReleaseInstance();
+    LOG_INFO("release log over");
 }
 
 bool CStartClass::Start()
@@ -72,19 +80,24 @@ bool CStartClass::Start()
 
 int main(int argc, char* argv[])
 {
-    CStartClass l_o_start;
-
-    if (! l_o_start.InitOver())
     {
-        LOG_RECORD(LOG_ERR,"sys init err" );
-        return -1;
+        CStartClass l_o_start;
+
+        if (! l_o_start.InitOver())
+        {
+            LOG_RECORD(LOG_ERR,"sys init err" );
+            return -1;
+        }
+
+        LOG_RECORD(LOG_INFO, "sys init over" );
+        
+        l_o_start.Start();
+
+        LOG_RECORD(LOG_INFO, "sys eixt");
     }
 
-    LOG_RECORD(LOG_INFO, "sys init over" );
-    
-    l_o_start.Start();
 
-    LOG_RECORD(LOG_INFO, "sys eixt");
+    std::cout << "resouce release over" << std::endl;
 	return 0;
 }
 

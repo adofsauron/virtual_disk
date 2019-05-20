@@ -5,10 +5,6 @@ CCmdRen::CCmdRen(CHandleFileSys* l_p_handle_file_sys)
 {
 }
 
-CCmdRen::~CCmdRen()
-{
-}
-
 bool CCmdRen::CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault)
 {
     if (2 != a_vec_args.size())

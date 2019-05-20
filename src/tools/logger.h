@@ -69,8 +69,9 @@ do { 																				\
 } while(0);
 
 
-#define LOG_INFO(str) 	LOG_RECORD(LOG_INFO, str)
-#define LOG_ERR(str) 	LOG_RECORD(LOG_ERR, str)
+#define LOG_INFO(str) 	LOG_RECORD(LOG_INFO,	str)
+#define LOG_ERR(str) 	LOG_RECORD(LOG_ERR, 	str)
+#define LOG_DEBUG(str) 	LOG_RECORD(LOG_DEBUG, 	str)
 
 
 #endif//__LOGGER_H__

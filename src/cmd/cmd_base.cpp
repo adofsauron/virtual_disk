@@ -7,10 +7,6 @@ CCmdBase::CCmdBase(const std::string& l_str_cmd_name, CHandleFileSys* l_p_handle
 {
 }
 
-CCmdBase::~CCmdBase()
-{
-}
-
 bool CCmdBase::Execute(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault)
 {
     if (!this->CheckFeasibility(a_vec_args, a_str_proc_resault))

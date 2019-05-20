@@ -40,23 +40,10 @@ bool CClientCmdAdaptor::ProcCmd(const std::vector<std::string>& a_vec_commond, s
         return false;
     }
 
-    CCmdBase* l_p_cmd = m_p_cmd_mangaer->FindCmd(l_str_cmd);
-
-    if (NULL == l_p_cmd)
-    {
-        a_str_proc_resault = "没有该命令";
-        return false;
-    }
-
     std::vector<std::string> l_vec_args = a_vec_commond;
     l_vec_args.erase(l_vec_args.begin()); // 只保留参数
-   
-    if (!l_p_cmd->Execute(l_vec_args, a_str_proc_resault)) // 处理失败
-    {
-        return false;
-    }
 
-    return true;
+    return  m_p_cmd_mangaer->RunCmd(l_str_cmd, l_vec_args, a_str_proc_resault);
 }
 
 

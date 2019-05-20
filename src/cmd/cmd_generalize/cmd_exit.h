@@ -14,7 +14,6 @@ class CCmdExit : public CCmdBase
 {
 public:
     explicit CCmdExit(CHandleFileSys* l_p_handle_file_sys);
-    ~CCmdExit();
 
 public:
     virtual bool CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault);

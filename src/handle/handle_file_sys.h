@@ -5,7 +5,7 @@
 
 #include <set>
 #include <string>
-#include <unordered_map>
+#include <map>
 
 #include "../base/pack_def.h"
 #include "./file_sys/handle_catalog.h"
@@ -34,10 +34,7 @@ public: // 对外暴露的操作接口
     inline bool InitOver() {return m_b_init_over;};
 
     // 路径是否存在,若存在返回节点属性
-    bool CheckPathExist(const std::string& a_str_path, SCateNode& a_o_cata_node);
-
-    // 路径是否存在,若存在返回节点属性
-    bool CheckPathExist(const std::string& a_str_path, SCateNode* a_p_cata_node);
+    bool CheckPathExist(const std::string& a_str_path, SCateNode*& a_p_cata_node);
 
     // 找出给定路径的绝对路径，只用于路径转换,不判断路径是否存在 TODO: 在路径转换时,中间不可存在通配符，绝对路径也不会去识别
     bool GetFullPath(const std::string& a_str_give_path, std::string& a_str_full_path);
@@ -72,13 +69,13 @@ public: // 对外暴露的操作接口
     bool CollectDirBrief(const std::string& a_str_full_name, std::vector<uint32>& a_vec_son_name);
 
     // 输出目录下文件，含子目录
-    bool CollectDirTotal(const std::string& a_str_full_name, std::unordered_map<std::string, std::vector<uint32> >& a_map_son);
+    bool CollectDirTotal(const std::string& a_str_full_name, std::map<std::string, std::vector<uint32> >& a_map_son);
 
     // 重新加载文件系统,服务运行时，load指令
     bool ReloadFileSys();
 
     // 打印单个节点信息
-    bool PrintNode(const SCateNode& l_o_node, std::string& a_str_info);
+    bool PrintNode(const SCateNode* l_p_node, std::string& a_str_info);
 
     // 打印单个节点信息
     bool PrintNode(const uint32 l_i_id, std::string& a_str_info);

@@ -12,7 +12,6 @@ class CCmdMove : public CCmdBase
 {
 public:
     explicit CCmdMove(CHandleFileSys* l_p_handle_file_sys);
-    ~CCmdMove();
 
 public:
     virtual bool CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault);

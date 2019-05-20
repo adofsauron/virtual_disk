@@ -4,12 +4,13 @@ cmake_minimum_required(VERSION 3.13)
 # 项目信息
 project (virtual_disk)
 
-SET(CMAKE_CXX_FLAGS_DEBUG "-g -ggdb -Wall -Werror -Wno-unknown-pragmas")
-SET(CMAKE_CXX_FLAGS_RELEASE "-g -O0")
+SET(CMAKE_CXX_FLAGS_DEBUG "-g -std=c11 -o0 -ggdb -Wall")
+SET(CMAKE_CXX_FLAGS_RELEASE "-g  -std=c11 -O3")
 SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--hash-style=sysv")
 #add_definitions(-DENABLE_MONGODB)
 add_definitions(-DDEBUG_LOG)
 
+SET(CMAKE_BUILD_TYPE Debug)
 
 add_subdirectory(base)
 add_subdirectory(client)

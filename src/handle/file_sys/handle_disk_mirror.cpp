@@ -5,7 +5,7 @@ CHandleDiskMirror::CHandleDiskMirror()
     :m_p_disk_mirror_name(config::CONST_DISK_MIRROR_NAME),
     m_i_buff_size(config::CONST_MAX_SIZE_MIRROR_BUFF)
 {
-    m_p_total_disk = (byte*) malloc (m_i_buff_size);
+    m_p_total_disk = (byte*) malloc (m_i_buff_size * sizeof(byte));
     memset(m_p_total_disk, 0x00, m_i_total_disk_size);
 }
 

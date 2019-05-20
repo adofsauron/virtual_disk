@@ -5,18 +5,16 @@ CCmdCopy::CCmdCopy(CHandleFileSys* l_p_handle_file_sys)
 {
 }
 
-CCmdCopy::~CCmdCopy()
-{
-}
-
-
 bool CCmdCopy::CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault)
 {
     const uint32 l_i_args_size = a_vec_args.size();
     if (2 != l_i_args_size)
     {
         a_str_proc_resault = "参数个数不是2个，输入参数个数为:";
-        a_str_proc_resault += l_i_args_size;
+        char buff[256] = {0x00};
+        snprintf(buff, 256, "%u", l_i_args_size);
+
+        a_str_proc_resault += buff;
 
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return false;
@@ -117,8 +115,8 @@ bool CCmdCopy::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
             return false;
         }
 
-        SCateNode l_o_src_cata_node;
-        if (! m_p_handle_file_sys->CheckPathExist(l_str_src_full_name, l_o_src_cata_node))
+        SCateNode* l_p_src_cata_node;
+        if (! m_p_handle_file_sys->CheckPathExist(l_str_src_full_name, l_p_src_cata_node))
         {
             a_str_proc_resault = "源文件不存在:";
             a_str_proc_resault += l_str_src_file;
@@ -126,8 +124,8 @@ bool CCmdCopy::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
             return false;
         }
 
-        l_i_src_file_size = l_o_src_cata_node.m_i_file_size;
-        l_i_src_file_index = l_o_src_cata_node.m_i_disk_index;
+        l_i_src_file_size = l_p_src_cata_node->m_i_file_size;
+        l_i_src_file_index = l_p_src_cata_node->m_i_disk_index;
     }
     
     // 可用空间大小检测
@@ -160,8 +158,8 @@ bool CCmdCopy::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
         return false;
     }
 
-     SCateNode l_o_cata_node;
-     if (m_p_handle_file_sys->CheckPathExist(l_str_dst_full_name, l_o_cata_node))
+     SCateNode* l_p_cata_node;
+     if (m_p_handle_file_sys->CheckPathExist(l_str_dst_full_name, l_p_cata_node))
      {
         a_str_proc_resault = "目标文件已存在,不可复制,dst=";
         a_str_proc_resault += l_str_dst_full_name;

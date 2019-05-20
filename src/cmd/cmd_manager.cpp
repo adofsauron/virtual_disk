@@ -3,12 +3,18 @@
 CCmdManager::CCmdManager(CHandleFileSys* a_p_hdle_file_sys)
 {
     m_b_init_over = false;
+
     if (NULL == a_p_hdle_file_sys)
     {
         return;
     }
-
     m_p_hdle_file_sys = a_p_hdle_file_sys;
+
+    // 初始化
+    for (uint32 i=DEF_CMD_NO_CD; i<DEF_CMD_NO_MAX; ++i)
+    {
+        m_vec_cmd[i] = NULL;
+    }
 
     if (! InitCmd())
     {
@@ -20,25 +26,24 @@ CCmdManager::CCmdManager(CHandleFileSys* a_p_hdle_file_sys)
     LOG_INFO("CCmdManager construt over");
 }
 
-// RAII
 CCmdManager::~CCmdManager()
 {
     this->ClearCmd();
+    m_p_hdle_file_sys = NULL;
+    m_b_init_over = false;
+
+    LOG_DEBUG("CCmdManager des");
 }
 
 bool CCmdManager::ClearCmd()
-{
-    if (!this->m_map_cmd.empty())
+{   
+    for (uint32 i=DEF_CMD_NO_CD; i<DEF_CMD_NO_MAX; ++i)
     {
-        std::map<const std::string, CCmdBase*>::iterator l_iter_cmd = this->m_map_cmd.begin();
-        for (; l_iter_cmd !=  this->m_map_cmd.end(); ++l_iter_cmd)
-        {
-            DELETE_PTR(l_iter_cmd->second);
-        }
-
-        this->m_map_cmd.clear();
+        DELETE_PTR(m_vec_cmd[i]);
+        m_vec_cmd[i] = NULL;
     }
 
+    LOG_DEBUG("cmd map clear");
     return true;
 }
 
@@ -66,6 +71,7 @@ bool CCmdManager::InitCmd()
     l_b_reg_over = (l_b_reg_over && RegisterCmd<CCmdRen>());
     l_b_reg_over = (l_b_reg_over && RegisterCmd<CCmdSave>());
 
+
     return l_b_reg_over;
 }
 
@@ -92,17 +98,20 @@ bool CCmdManager::RegisterCmd()
         return false;
     }
 
-    // 若已存在,则拒绝插入. 防止手误写俩一样的命令
-    std::map<std::string, CCmdBase*>::iterator l_iter_cmd = this->m_map_cmd.find(l_str_cmd_name);
-    if (l_iter_cmd != this->m_map_cmd.end())
+    int l_i_no = GetCmdNo(l_str_cmd_name);
+    if ((l_i_no <= DEF_CMD_NO_INVL) || (l_i_no >= DEF_CMD_NO_MAX))
     {
-        std::string log = "cmd exit :";
-        log += l_str_cmd_name;
-        LOG_ERR(log);
+        LOG_ERR("cmd no err");
+        return false;
+    }
+    
+    if (NULL != m_vec_cmd[l_i_no])
+    {
+        LOG_ERR("cmd exist");
         return false;
     }
 
-    this->m_map_cmd.insert(std::make_pair(l_str_cmd_name, l_p_cmd));
+    m_vec_cmd[l_i_no] = l_p_cmd;
 
     std::string log = "cmd register :\t";
     log += l_str_cmd_name;
@@ -111,13 +120,47 @@ bool CCmdManager::RegisterCmd()
     return true;
 }
 
-CCmdBase* CCmdManager::FindCmd(const std::string& a_str_cmd)
+// 执行命令
+bool CCmdManager::RunCmd(const std::string& a_str_cmd, const std::vector<std::string>& a_vec_args, std::string& a_str_resault)
 {
-    std::map<const std::string, CCmdBase*>::iterator l_iter_cmd = this->m_map_cmd.find(a_str_cmd);
-    if (l_iter_cmd == this->m_map_cmd.end())
+    if (a_str_cmd.empty())
     {
-        return NULL;
+        a_str_resault = "cmd empty";
+        return false;
     }
 
-    return l_iter_cmd->second;
+    int l_i_no = GetCmdNo(a_str_cmd);
+    if ((l_i_no <= DEF_CMD_NO_INVL) || (l_i_no >= DEF_CMD_NO_MAX))
+    {
+        a_str_resault = "cmd not find:";
+        LOG_ERR("cmd no err");
+        return false;
+    }
+
+    if (NULL == m_vec_cmd[l_i_no])
+    {
+        a_str_resault = "cmd not find";
+        LOG_ERR("m_vec_cmd[l_i_no] is null");
+        return false;
+    }
+
+    return m_vec_cmd[l_i_no]->Execute(a_vec_args, a_str_resault);
+}
+
+int CCmdManager::GetCmdNo(const std::string& a_str_cmd)
+{
+    if(DEF_CMD_CD     	== a_str_cmd) return DEF_CMD_NO_CD		;
+    if(DEF_CMD_CLS      == a_str_cmd) return DEF_CMD_NO_CLS     ;
+    if(DEF_CMD_COPY     == a_str_cmd) return DEF_CMD_NO_COPY    ;
+    if(DEF_CMD_DEL      == a_str_cmd) return DEF_CMD_NO_DEL     ;
+    if(DEF_CMD_DIR      == a_str_cmd) return DEF_CMD_NO_DIR     ;
+    if(DEF_CMD_EXIT     == a_str_cmd) return DEF_CMD_NO_EXIT    ;
+    if(DEF_CMD_LOAD     == a_str_cmd) return DEF_CMD_NO_LOAD    ;
+    if(DEF_CMD_MD       == a_str_cmd) return DEF_CMD_NO_MD      ;
+    if(DEF_CMD_MKLINK   == a_str_cmd) return DEF_CMD_NO_MKLINK  ;
+    if(DEF_CMD_MOVE     == a_str_cmd) return DEF_CMD_NO_MOVE    ;
+    if(DEF_CMD_REN      == a_str_cmd) return DEF_CMD_NO_REN     ;
+    if(DEF_CMD_SAVE     == a_str_cmd) return DEF_CMD_NO_SAVE    ;
+
+    return DEF_CMD_NO_INVL;
 }

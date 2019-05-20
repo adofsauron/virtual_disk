@@ -5,10 +5,6 @@ CCmdDel::CCmdDel(CHandleFileSys* l_p_handle_file_sys)
 {
 }
 
-CCmdDel::~CCmdDel()
-{
-}
-
 bool CCmdDel::CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault)
 {
     if (a_vec_args.empty())
@@ -40,7 +36,7 @@ bool CCmdDel::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
         l_vec_args.erase(l_vec_args.begin());
     }
 
-    for (int i=0; i<l_vec_args.size(); ++i)
+    for (uint32 i=0; i<l_vec_args.size(); ++i)
     {
          std::string l_str_name = l_vec_args[i];
 
@@ -64,7 +60,7 @@ bool CCmdDel::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
             return false;
         }
 
-        SCateNode l_o_src_cata_node;
+        SCateNode* l_o_src_cata_node;
         if (m_p_handle_file_sys->CheckPathExist(l_str_name, l_o_src_cata_node))
         {
             a_str_proc_resault = "文件不存在:";
@@ -73,7 +69,7 @@ bool CCmdDel::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
             return false;
         }
 
-        if ( (!l_b_del_all) && (CNODE_DIR == l_o_src_cata_node.m_i_type))
+        if ( (!l_b_del_all) && (CNODE_DIR == l_o_src_cata_node->m_i_type))
         {
             a_str_proc_resault = "文件夹不可删除，请使用/s强制删除";
             a_str_proc_resault += l_str_name;

@@ -12,7 +12,6 @@ class CCmdDel : public CCmdBase
 {
 public:
     explicit CCmdDel(CHandleFileSys* l_p_handle_file_sys);
-    ~CCmdDel();
 
 public:
     virtual bool CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault);

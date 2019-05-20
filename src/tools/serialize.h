@@ -3,7 +3,7 @@
 #ifndef __HANDLE_SERIZLIZE_H__
 #define __HANDLE_SERIZLIZE_H__
 
-#include <unordered_map>
+#include <map>
 
 #include "../base/base.h"
 #include "../handle/handle_file_sys.h"
@@ -26,7 +26,7 @@ public:
 	static bool UnPackAvalDiskInfo(byte* a_p_space, const uint32 a_i_size,  SAvalDiskInfo& a_o_aval_disk_info);
 
 	// 反序列化目录树节点
-	static bool UnPackCatelog(byte* a_p_space, const uint32 a_i_size,  const uint32 a_i_cate_node_num , std::unordered_map<uint32, SCateNode>& a_map_catalog);
+	static bool UnPackCatelog(byte* a_p_space, const uint32 a_i_size,  const uint32 a_i_cate_node_num , std::map<uint32, SCateNode>& a_map_catalog);
 
 	// 序列化文件系统信息
 	static bool PackFileSysInfo(byte* a_p_space, const uint32 a_i_size, const SFileSysInfo& a_o_file_sys_info);
@@ -35,7 +35,7 @@ public:
 	static bool PackAvalDiskInfo(byte* a_p_space, const uint32 a_i_size, const  SAvalDiskInfo& a_o_aval_disk_info);
 
 	// 序列化目录树节点
-	static bool PackCatelog(byte* a_p_space, const uint32 a_i_size, const std::unordered_map<uint32, SCateNode>& a_map_catalog);
+	static bool PackCatelog(byte* a_p_space, const uint32 a_i_size, const std::map<uint32, SCateNode>& a_map_catalog);
 };
 
 

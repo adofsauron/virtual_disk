@@ -5,9 +5,6 @@ CCmdExit::CCmdExit(CHandleFileSys* l_p_handle_file_sys)
 {
 }
 
-CCmdExit::~CCmdExit()
-{
-}
 
 bool CCmdExit::CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault)
 {

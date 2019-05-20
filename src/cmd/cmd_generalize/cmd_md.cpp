@@ -5,10 +5,6 @@ CCmdMd::CCmdMd(CHandleFileSys* l_p_handle_file_sys)
 {
 }
 
-CCmdMd::~CCmdMd()
-{
-}
-
 bool CCmdMd::CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault)
 {
     if (1 != a_vec_args.size())
@@ -52,8 +48,10 @@ bool CCmdMd::Dispose(const std::vector<std::string>& a_vec_args, std::string& a_
         return false;
     }
 
-    SCateNode l_o_src_cata_node;
-    if (m_p_handle_file_sys->CheckPathExist(l_str_full_name, l_o_src_cata_node))
+    LOG_INFO(l_str_full_name);
+
+    SCateNode* l_p_src_cata_node;
+    if (m_p_handle_file_sys->CheckPathExist(l_str_full_name, l_p_src_cata_node))
     {
         a_str_proc_resault = "文件已经存在,不可创建";
         a_str_proc_resault += l_str_full_name;

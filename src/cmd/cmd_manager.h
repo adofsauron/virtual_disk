@@ -47,8 +47,8 @@ public:
 public:
     bool& InitOver() {return m_b_init_over;};
 
-     // 找出对应命令,若没有则返回NULL,调用方决定处理策略
-    CCmdBase* FindCmd(const std::string& a_str_cmd);
+     // 执行命令
+    bool RunCmd(const std::string& a_str_cmd, const std::vector<std::string>& a_vec_args, std::string& a_str_resault);
 
 private:
     // 命令初始化
@@ -61,10 +61,18 @@ private:
     // 命令清理
     bool ClearCmd();
 
+    // 找出对应命令,若没有则返回NULL
+    CCmdBase* FindCmd(const std::string& a_str_cmd);
+
+    // 根据指令获取指令id, <=0为错误
+    int static GetCmdNo(const std::string& a_str_cmd);
+
+
 private:
-    std::map<const std::string, CCmdBase*>      m_map_cmd; // 初始化时建立,不会动态吧变化,不需要用哈希
     CHandleFileSys*                             m_p_hdle_file_sys;
     bool                                        m_b_init_over;
+
+    CCmdBase*                                   m_vec_cmd[DEF_CMD_NO_MAX];
 
 };
 

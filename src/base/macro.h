@@ -13,6 +13,17 @@ do							\
 	}						\
 } while (0);
 
+#define DELETE_PTR_ARRAY(ptr)	\
+do								\
+{								\
+	if (NULL != ptr)			\
+	{							\
+		delete[] ptr;			\
+		ptr = NULL;				\
+	}							\
+} while (0);
+
+
 #define FREE_PTR(ptr)		\
 do							\
 {							\

@@ -5,16 +5,16 @@ CCmdMklink::CCmdMklink(CHandleFileSys* l_p_handle_file_sys)
 {
 }
 
-CCmdMklink::~CCmdMklink()
-{
-}
-
 bool CCmdMklink::CheckFeasibility(const std::vector<std::string>& a_vec_args, std::string& a_str_proc_resault)
 {
     if (2 != a_vec_args.size())
     {
         a_str_proc_resault = "参数不是2个:";
-        a_str_proc_resault += a_vec_args.size();
+
+         char buff[256] = {0x00};
+        snprintf(buff, 256, "%u", a_vec_args.size());
+
+        a_str_proc_resault += buff;
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return false;
     }
@@ -72,8 +72,8 @@ bool CCmdMklink::Dispose(const std::vector<std::string>& a_vec_args, std::string
         return false;
     }
 
-     SCateNode l_o_src_cata_node;
-    if (!m_p_handle_file_sys->CheckPathExist(l_str_full_name, l_o_src_cata_node))
+     SCateNode* l_p_to_cata_node;
+    if (!m_p_handle_file_sys->CheckPathExist(l_str_full_name, l_p_to_cata_node))
     {
         a_str_proc_resault = "源文件不存在,不可创建链接:";
         a_str_proc_resault += l_str_full_name;
@@ -82,9 +82,9 @@ bool CCmdMklink::Dispose(const std::vector<std::string>& a_vec_args, std::string
     }
 
 
-    const uint32 l_i_src_id = l_o_src_cata_node.m_i_id;
+    const uint32 l_i_src_id = l_p_to_cata_node->m_i_id;
 
-    if (m_p_handle_file_sys->CheckPathExist(l_str_link_full_name, l_o_src_cata_node))
+    if (m_p_handle_file_sys->CheckPathExist(l_str_link_full_name, l_p_to_cata_node))
     {
         a_str_proc_resault = "链接文件已存在,不可创建链接:";
         a_str_proc_resault += l_str_link_full_name;
@@ -95,8 +95,10 @@ bool CCmdMklink::Dispose(const std::vector<std::string>& a_vec_args, std::string
 
     // 先创建,再向目录节点中插入数据
     SCateNode* l_p_new_node = NULL;
-    if (m_p_handle_file_sys->AddNewFile(l_str_full_name, CNODE_LINK, (ACCESS_WRITE|ACCESS_RREAD|ACCESS_EXECUTE), l_p_new_node))
+    if (! m_p_handle_file_sys->AddNewFile(l_str_link_full_name, CNODE_LINK, (ACCESS_WRITE|ACCESS_RREAD|ACCESS_EXECUTE), l_p_new_node))
     {
+        a_str_proc_resault = "文件创建失败";
+        LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return false;
     }
 
