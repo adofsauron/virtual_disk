@@ -1,4 +1,4 @@
-#ifndef __CLIENT_CMD_ADAPTOR_H__
+﻿#ifndef __CLIENT_CMD_ADAPTOR_H__
 #define __CLIENT_CMD_ADAPTOR_H__
 
 #include <vector>

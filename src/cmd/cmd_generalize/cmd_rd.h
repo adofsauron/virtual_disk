@@ -1,4 +1,4 @@
-#ifndef __CMD_RD_H__
+﻿#ifndef __CMD_RD_H__
 #define __CMD_RD_H__
 
 #include<stdio.h>

@@ -1,7 +1,7 @@
-#include "cmd_exit.h"
+﻿#include "cmd_exit.h"
 
 CCmdExit::CCmdExit(CHandleFileSys* l_p_handle_file_sys)
-    :CCmdBase(DEF_CMD_EXIT, l_p_handle_file_sys)
+    :CCmdBase(CONST_CMD_EXIT, l_p_handle_file_sys)
 {
 }
 

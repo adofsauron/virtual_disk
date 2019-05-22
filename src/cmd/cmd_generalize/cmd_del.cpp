@@ -1,7 +1,7 @@
-#include "cmd_del.h"
+﻿#include "cmd_del.h"
 
 CCmdDel::CCmdDel(CHandleFileSys* l_p_handle_file_sys)
-    :CCmdBase(DEF_CMD_DEL, l_p_handle_file_sys)
+    :CCmdBase(CONST_CMD_DEL, l_p_handle_file_sys)
 {
 }
 
@@ -27,7 +27,8 @@ bool CCmdDel::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
         return false;
     }
 
-    bool l_b_del_all = false;
+    bool l_b_del_all = false; // 删除文件
+    bool l_b_del_link_real = false;
     std::vector<std::string> l_vec_args = a_vec_args;
 
     if ("/s" == a_vec_args[0])
@@ -36,12 +37,18 @@ bool CCmdDel::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
         l_vec_args.erase(l_vec_args.begin());
     }
 
+    if ("/f" == a_vec_args[0])
+    {
+        l_b_del_link_real = true;
+        l_vec_args.erase(l_vec_args.begin());
+    }
+
     for (uint32 i=0; i<l_vec_args.size(); ++i)
     {
          std::string l_str_name = l_vec_args[i];
 
         // 路径转换
-        CDealString::PathConver((char*)l_str_name.c_str(), l_str_name.length());
+        CDealString::PathToIner(l_str_name);
 
         if ("/" == l_str_name)
         {
@@ -60,8 +67,10 @@ bool CCmdDel::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
             return false;
         }
 
-        SCateNode* l_o_src_cata_node;
-        if (m_p_handle_file_sys->CheckPathExist(l_str_name, l_o_src_cata_node))
+        LOG_DEBUG(l_str_src_full_name);
+
+        SCateNode* l_o_src_cata_node = NULL;
+        if (! m_p_handle_file_sys->CheckPathExist(l_str_src_full_name, l_o_src_cata_node))
         {
             a_str_proc_resault = "文件不存在:";
             a_str_proc_resault += l_str_name;
@@ -77,7 +86,29 @@ bool CCmdDel::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
             return false;
         }
 
-        if (!m_p_handle_file_sys->DelFile(l_str_src_full_name))
+		// 删除被链接的文件
+		if ((l_b_del_link_real) && (CNODE_LINK == l_o_src_cata_node->m_i_type))
+		{
+			const uint32 l_i_link_id = l_o_src_cata_node->m_i_link_id;
+			SCateNode* l_o_link_cata_node = NULL;
+			if (!m_p_handle_file_sys->GetCateNodeById(l_i_link_id, l_o_link_cata_node))
+			{
+				a_str_proc_resault = "强制删除被链接的文件时,被链接的文件不存在；";
+				a_str_proc_resault += l_str_name;
+				LOG_RECORD(LOG_INFO, a_str_proc_resault);
+				continue;
+			}
+
+			if (!m_p_handle_file_sys->DelFile(l_o_link_cata_node->m_p_full_name))
+			{
+				a_str_proc_resault = "被链接文件删除失败:";
+				a_str_proc_resault += l_o_link_cata_node->m_p_full_name;
+				LOG_RECORD(LOG_ERR, a_str_proc_resault);
+				return false;
+			}
+		}
+
+        if (! m_p_handle_file_sys->DelFile(l_str_src_full_name))
         {
             a_str_proc_resault = "文件删除失败:";
             a_str_proc_resault += l_str_name;
@@ -86,7 +117,7 @@ bool CCmdDel::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
         }
     }
 
-    a_str_proc_resault = "文件删除成功";
+    a_str_proc_resault += "文件删除成功";
     LOG_RECORD(LOG_DEBUG,a_str_proc_resault);
     return true;
 }

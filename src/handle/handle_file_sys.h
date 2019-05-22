@@ -1,4 +1,4 @@
-// 文件系统操作类
+﻿// 文件系统操作类
 
 #ifndef __HANDLE_FILE_SYS_H__
 #define __HANDLE_FILE_SYS_H__
@@ -36,6 +36,9 @@ public: // 对外暴露的操作接口
     // 路径是否存在,若存在返回节点属性
     bool CheckPathExist(const std::string& a_str_path, SCateNode*& a_p_cata_node);
 
+    // 根据节点id获得节点属性
+    bool GetCateNodeById(const uint32 a_i_id, SCateNode*& a_p_cata_node);
+
     // 找出给定路径的绝对路径，只用于路径转换,不判断路径是否存在 TODO: 在路径转换时,中间不可存在通配符，绝对路径也不会去识别
     bool GetFullPath(const std::string& a_str_give_path, std::string& a_str_full_path);
 
@@ -60,16 +63,16 @@ public: // 对外暴露的操作接口
     bool DelFile(const std::string& a_str_full_name);
 
     // 申请a_i_size大小的可用空间, a_p_aval_space是可用空间的首地址
-    bool ApplayAvalSpace(const uint64 a_i_size, byte* a_p_aval_space, uint64& a_i_incex);
+    bool ApplayAvalSpace(const uint64 a_i_size, byte*& a_p_aval_space, uint64& a_i_incex);
 
     // 根据索引，获得可用空间的首地址
-    bool GetAvalSpaceByIndex(const uint64 a_i_incex, byte* a_p_space);
+    bool GetAvalSpaceByIndex(const uint64 a_i_incex, byte*& a_p_space);
 
     // 输出目录下文件, 不包含子目录
     bool CollectDirBrief(const std::string& a_str_full_name, std::vector<uint32>& a_vec_son_name);
 
     // 输出目录下文件，含子目录
-    bool CollectDirTotal(const std::string& a_str_full_name, std::map<std::string, std::vector<uint32> >& a_map_son);
+    bool CollectDirTotal(const std::string& a_str_full_name, std::unordered_map<std::string, std::vector<uint32> >& a_map_son);
 
     // 重新加载文件系统,服务运行时，load指令
     bool ReloadFileSys();
@@ -89,7 +92,8 @@ public: // 对外暴露的操作接口
     // 保存文件系统
     bool SaveFileSys();
 
-    static void PrintSFileSysInfo(const SFileSysInfo& a_o_info, std::string& a_str_log);
+	// 修改父路径下的所有子节点的绝对路径名
+	bool MotifySonFullName(const uint32 l_i_fid);
 
 private: // 对外隐藏, 用户不能直接操作文件系统, 只能由暴露出的函数处理
     // 初始化文件系统信息,格式化磁盘时使用

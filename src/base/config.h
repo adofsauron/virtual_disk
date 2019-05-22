@@ -1,4 +1,4 @@
-
+﻿
 // 配置类
 
 #ifndef __CONFIG_H__
@@ -17,7 +17,7 @@ namespace config
 	static const uint64	   CONST_DISK_BLOCK_SIZE            = 1024;									// 磁盘块,按块写入镜像文件
 	static const uint64	   CONST_MAX_SIZE_MIRROR_BUFF		= CONST_MAX_SIZE_DISK_TOTAL;			// 磁盘镜像加载进内存的空间缓存
 
-	static const char*     CONST_DISK_MIRROR_NAME           = "virtual_disk.data";   // 虚拟磁盘被序列化后存储的文件名称
+	static const std::string     CONST_DISK_MIRROR_NAME           = "virtual_disk.data";   // 虚拟磁盘被序列化后存储的文件名称
 	//static const char*     CONST_LOG_FILE_PATH              = "log/";                       	// 日志文件保存路径
 	//static const char*     CONST_LOG_FILE_NAME              = "vdisk";                              // 日志文件名称,后边需追加年月日时分秒
 };

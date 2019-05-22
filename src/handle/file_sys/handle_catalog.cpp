@@ -1,4 +1,4 @@
-#include "handle_catalog.h"
+﻿#include "handle_catalog.h"
 
 CHandleCatelog::CHandleCatelog()
     :m_i_root_node_id(1) // 根节点id为1
@@ -41,7 +41,7 @@ bool CHandleCatelog::AddCateNode(uint32& a_i_new_node_id)
     }
     
     SCateNode& l_o_node = m_map_catalog[l_i_nid];
-    memset(&l_o_node, 0x00, MCRO_STRUCT_SIZE(l_o_node));
+    l_o_node.Init();
 
     l_o_node.m_i_id = l_i_nid;
     l_o_node.m_i_son_num = 0;
@@ -60,13 +60,13 @@ uint32 CHandleCatelog::GetNewNodeId()
 // 检测节点id是否已存在
 bool CHandleCatelog::CheckNodeIdExist(const uint32 a_i_id)
 {
-    std::map<uint32, SCateNode>::const_iterator l_iter = m_map_catalog.find(a_i_id);
+    std::unordered_map<uint32, SCateNode>::const_iterator l_iter = m_map_catalog.find(a_i_id);
     return l_iter != m_map_catalog.end();
 }
 
 bool CHandleCatelog::CheckFullPathExist(const std::string& l_str_full_path)
 {
-    std::map<std::string, uint32>::const_iterator l_iter = m_map_full_name_to_id.find(l_str_full_path);
+    std::unordered_map<std::string, uint32>::const_iterator l_iter = m_map_full_name_to_id.find(l_str_full_path);
     return  l_iter != m_map_full_name_to_id.end();
 }
 
@@ -78,7 +78,7 @@ bool CHandleCatelog::DelCateNode(const uint32 a_i_id)
         return false;
     }
 
-    std::map<uint32, SCateNode>::iterator l_iter = m_map_catalog.find(a_i_id);
+    std::unordered_map<uint32, SCateNode>::iterator l_iter = m_map_catalog.find(a_i_id);
     if (l_iter == m_map_catalog.end())
     {
         return false;
@@ -90,7 +90,7 @@ bool CHandleCatelog::DelCateNode(const uint32 a_i_id)
 
 bool CHandleCatelog::GetCateNode(const uint32 a_i_id, SCateNode*& a_p_node)
 {
-    std::map<uint32, SCateNode>::iterator l_iter = m_map_catalog.find(a_i_id);
+    std::unordered_map<uint32, SCateNode>::iterator l_iter = m_map_catalog.find(a_i_id);
     if (l_iter == m_map_catalog.end())
     {
         return false;
@@ -102,7 +102,7 @@ bool CHandleCatelog::GetCateNode(const uint32 a_i_id, SCateNode*& a_p_node)
 
 bool CHandleCatelog::SetCateNode(const uint32 a_i_id, const SCateNode& a_o_node)
 {
-    std::map<uint32, SCateNode>::iterator l_iter = m_map_catalog.find(a_i_id);
+    std::unordered_map<uint32, SCateNode>::iterator l_iter = m_map_catalog.find(a_i_id);
     if (l_iter == m_map_catalog.end())
     {
         return false;
@@ -123,7 +123,7 @@ bool CHandleCatelog::FatherAddSonId(const uint32 a_i_fid, const uint32 a_i_sid)
         return false;
     }
 
-    std::map<uint32, SCateNode>::iterator l_iter = m_map_catalog.find(a_i_sid);
+    std::unordered_map<uint32, SCateNode>::iterator l_iter = m_map_catalog.find(a_i_sid);
     if (m_map_catalog.end() == l_iter) // 子节点不存在
     {
         LOG_ERR("");
@@ -177,7 +177,7 @@ bool CHandleCatelog::FatherDelSonId(const uint32 a_i_fid, const uint32 a_i_sid)
         return false;
     }
 
-    std::map<uint32, SCateNode>::iterator l_iter = m_map_catalog.find(a_i_sid);
+    std::unordered_map<uint32, SCateNode>::iterator l_iter = m_map_catalog.find(a_i_sid);
     if (m_map_catalog.end() == l_iter) // 子节点不存在
     {
         return false;
@@ -269,7 +269,7 @@ bool CHandleCatelog::InitCacheFullName2Id()
 
     m_map_full_name_to_id.clear();
 
-    std::map<uint32, SCateNode>::const_iterator l_iter = m_map_catalog.begin();
+    std::unordered_map<uint32, SCateNode>::const_iterator l_iter = m_map_catalog.begin();
     for (; l_iter != m_map_catalog.end(); ++l_iter)
     {
         const SCateNode& l_o_node = l_iter->second;
@@ -302,7 +302,7 @@ bool CHandleCatelog::GetNodeIdByFullName(const std::string& a_str_full_name, uin
         return false;
     }
 
-    std::map<std::string, uint32>::const_iterator l_iter = m_map_full_name_to_id.find(a_str_full_name);
+    std::unordered_map<std::string, uint32>::const_iterator l_iter = m_map_full_name_to_id.find(a_str_full_name);
     if (l_iter == m_map_full_name_to_id.end())
     {
         return false;
@@ -322,7 +322,7 @@ void CHandleCatelog::ClearData()
 // 插入文件缓存信息
 bool CHandleCatelog::InserCacheFullName2Id(const std::string& a_str_full_name, const uint32 l_i_node_id)
 {
-    std::map<std::string, uint32>::const_iterator l_iter = m_map_full_name_to_id.find(a_str_full_name);
+    std::unordered_map<std::string, uint32>::const_iterator l_iter = m_map_full_name_to_id.find(a_str_full_name);
     if (l_iter != m_map_full_name_to_id.end()) // 缓存信息存在,则拒绝插入,否则可能破坏已有数据关系
     {
         return false;
@@ -335,7 +335,7 @@ bool CHandleCatelog::InserCacheFullName2Id(const std::string& a_str_full_name, c
 // 删除缓存信息
 bool CHandleCatelog::DelCacheFullName2Id(const std::string& a_str_full_name)
 {
-    std::map<std::string, uint32>::const_iterator l_iter = m_map_full_name_to_id.find(a_str_full_name);
+    std::unordered_map<std::string, uint32>::const_iterator l_iter = m_map_full_name_to_id.find(a_str_full_name);
     if (l_iter == m_map_full_name_to_id.end()) // 缓存不存在，则认为数据异常
     {
         return false;
@@ -347,7 +347,7 @@ bool CHandleCatelog::DelCacheFullName2Id(const std::string& a_str_full_name)
 
 void CHandleCatelog::PrintfAllNode()
 {
-    std::map<uint32, SCateNode>::const_iterator l_iter = m_map_catalog.begin();
+    std::unordered_map<uint32, SCateNode>::const_iterator l_iter = m_map_catalog.begin();
     for (;l_iter != m_map_catalog.end(); ++l_iter)
     {
         const SCateNode& l_o_node = l_iter->second;

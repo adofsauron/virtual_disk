@@ -1,7 +1,7 @@
-#include "cmd_copy.h"
+﻿#include "cmd_copy.h"
 
 CCmdCopy::CCmdCopy(CHandleFileSys* l_p_handle_file_sys)
-    :CCmdBase(DEF_CMD_COPY, l_p_handle_file_sys)
+    :CCmdBase(CONST_CMD_COPY, l_p_handle_file_sys)
 {
 }
 
@@ -49,7 +49,7 @@ bool CCmdCopy::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
     // 注意: 在创建文件前必须先对可行性做严格的检测,否则可能创建出多余的空文件
 
     std::string l_str_src_file = a_vec_args[0];
-    const std::string& l_str_dst_file = a_vec_args[1];
+    std::string l_str_dst_file = a_vec_args[1];
 
     if (l_str_src_file.empty() || l_str_dst_file.empty())
     {
@@ -69,6 +69,8 @@ bool CCmdCopy::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return false;
     }
+
+    CDealString::PathToIner(l_str_dst_file);
 
     // 源文件的大小
     uint64 l_i_src_file_size = 0;
@@ -104,7 +106,7 @@ bool CCmdCopy::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
     {
 
         // 路径转换
-        CDealString::PathConver((char*)l_str_src_file.c_str(), l_str_src_file.length());
+        CDealString::PathToIner(l_str_src_file);
 
         std::string l_str_src_full_name;
         if(! m_p_handle_file_sys->GetFullPath(l_str_src_file,l_str_src_full_name))
@@ -140,10 +142,10 @@ bool CCmdCopy::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
     // 空间不足
     if (l_i_src_file_size > l_aval_size)
     {
-        a_str_proc_resault = "可用空间不足,无法拷贝文件,需要:";
-        a_str_proc_resault += l_i_src_file_size;
-        a_str_proc_resault += ",可用空间大小：";
-        a_str_proc_resault += l_aval_size;
+		char buff[1024] = {0x00};
+		snprintf(buff,1024,"可用空间不足,无法拷贝文件,需要:%llu, 可用空间大小:%llu",l_i_src_file_size,l_aval_size);
+
+		a_str_proc_resault = buff;
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return false;
     }
@@ -158,7 +160,7 @@ bool CCmdCopy::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
         return false;
     }
 
-     SCateNode* l_p_cata_node;
+     SCateNode* l_p_cata_node = NULL;
      if (m_p_handle_file_sys->CheckPathExist(l_str_dst_full_name, l_p_cata_node))
      {
         a_str_proc_resault = "目标文件已存在,不可复制,dst=";
@@ -180,7 +182,6 @@ bool CCmdCopy::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return false;
     }
-
 
     // 以下为开始占用磁盘空间, 前提是源文件不是空文件
 
@@ -233,7 +234,7 @@ bool CCmdCopy::Dispose(const std::vector<std::string>& a_vec_args, std::string& 
     if (l_b_real_disk_file) // 物理磁盘
     {
         FILE* l_p_file = NULL;
-        if(! CDealFile::FileOpen(l_str_src_file.c_str(), "rw+", l_p_file))
+        if(! CDealFile::FileOpen(l_str_src_file.c_str(), "r+", l_p_file))
         {
             a_str_proc_resault = "无法打开源文件,";
             a_str_proc_resault += l_str_src_file;

@@ -1,7 +1,7 @@
-#include "cmd_ren.h"
+﻿#include "cmd_ren.h"
 
 CCmdRen::CCmdRen(CHandleFileSys* l_p_handle_file_sys)
-    :CCmdBase(DEF_CMD_REN, l_p_handle_file_sys)
+    :CCmdBase(CONST_CMD_REN, l_p_handle_file_sys)
 {
 }
 
@@ -9,8 +9,7 @@ bool CCmdRen::CheckFeasibility(const std::vector<std::string>& a_vec_args, std::
 {
     if (2 != a_vec_args.size())
     {
-        a_str_proc_resault = "参数不是2个:";
-        a_str_proc_resault += a_vec_args.size();
+        a_str_proc_resault = "参数不是2个";
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return false;
     }
@@ -45,9 +44,36 @@ bool CCmdRen::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
     std::string l_str_file = a_vec_args[0];
     std::string l_str_to_file = a_vec_args[1];
 
+	bool l_b_aval = true;
+	for (uint32 i = 0; i<l_str_to_file.length(); ++i)
+	{
+		const char lc = l_str_to_file[i];
+
+		if ('.' == lc)
+		{
+			continue;
+		}
+
+		if (!((CDealString::IsZhCh(lc) != 0) 
+			|| (isdigit(lc) != 0) 
+			|| (isalpha(lc) != 0))) 
+		{
+			l_b_aval = false;
+			break;
+		}
+	}
+
+	if (!l_b_aval)
+	{
+		a_str_proc_resault = "修改后的文件名包含不支持的字符,仅支持中文,英文字符，数字:";
+		a_str_proc_resault += l_str_to_file;
+		LOG_RECORD(LOG_ERR, a_str_proc_resault);
+		return false;
+	}
+
      // 路径转换
-    CDealString::PathConver((char*)l_str_file.c_str(), l_str_file.length());
-    CDealString::PathConver((char*)l_str_to_file.c_str(), l_str_to_file.length());
+    CDealString::PathToIner(l_str_file);
+    CDealString::PathToIner(l_str_to_file);
 
     std::string l_str_full_name;
     if(!m_p_handle_file_sys->GetFullPath(l_str_file,l_str_full_name))
@@ -67,7 +93,7 @@ bool CCmdRen::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
         return false;
     }
 
-     SCateNode* l_p_src_cate_node;
+     SCateNode* l_p_src_cate_node = NULL;
     if (!m_p_handle_file_sys->CheckPathExist(l_str_full_name, l_p_src_cate_node))
     {
         a_str_proc_resault = "源文件不存在,不可重命名:";
@@ -75,8 +101,6 @@ bool CCmdRen::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return false;
     }
-
-    const uint32 l_i_src_id =l_p_src_cate_node->m_i_id;
 
     if (m_p_handle_file_sys->CheckPathExist(l_str_to_full_name, l_p_src_cate_node))
     {
@@ -95,8 +119,12 @@ bool CCmdRen::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
         return false;
     }
 
+	memset(l_p_src_cate_node->m_p_name, 0x00, config::CONST_MAX_SIZE_FILE_NAME + 1);
+	memset(l_p_src_cate_node->m_p_full_name, 0x00, config::CONST_MAX_SIZE_FILE_FULL_NAME + 1);
+
     memcpy(l_p_src_cate_node->m_p_full_name, l_str_to_full_name.c_str(), l_str_to_full_name.length());
     memcpy(l_p_src_cate_node->m_p_name, l_str_only_name.c_str(), l_str_only_name.length());
+	l_p_src_cate_node->m_i_update_time = CDate::GetUnixTime();
 
     // 修改缓存
     if (! m_p_handle_file_sys->ReBuildCatelogCache())
@@ -106,6 +134,13 @@ bool CCmdRen::Dispose(const std::vector<std::string>& a_vec_args, std::string& a
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return false;
     }
+
+	if (! m_p_handle_file_sys->MotifySonFullName(l_p_src_cate_node->m_i_id))
+	{
+		a_str_proc_resault = "重命名子目录绝对路径失败";
+		LOG_RECORD(LOG_DEBUG, a_str_proc_resault);
+		return false;
+	}
 
     a_str_proc_resault = "重命名成功";
     LOG_RECORD(LOG_DEBUG,a_str_proc_resault);

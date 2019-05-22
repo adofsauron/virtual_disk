@@ -1,4 +1,4 @@
-#include "serialize.h"
+﻿#include "serialize.h"
 
 // 反序列化文件系统信息
 bool CSerialize::UnPackFileSysInfo(byte* a_p_space, const uint32 a_i_size,  SFileSysInfo& a_o_file_sys_info)
@@ -48,7 +48,7 @@ bool CSerialize::UnPackAvalDiskInfo(byte* a_p_space, const uint32 a_i_size,  SAv
 }
 
 // 反序列化目录树节点
-bool CSerialize::UnPackCatelog(byte* a_p_space, const uint32 a_i_size,  const uint32 a_i_cate_node_num , std::map<uint32, SCateNode>& a_map_catalog)
+bool CSerialize::UnPackCatelog(byte* a_p_space, const uint32 a_i_size,  const uint32 a_i_cate_node_num , std::unordered_map<uint32, SCateNode>& a_map_catalog)
 {
 	if (NULL == a_p_space)
 	{
@@ -73,15 +73,20 @@ bool CSerialize::UnPackCatelog(byte* a_p_space, const uint32 a_i_size,  const ui
 	uint64 l_i_index = 0;
 	for (uint32 i = 0; i < a_i_cate_node_num; ++i)
 	{
+		const byte* l_p_space = a_p_space + l_i_index;
+		if (NULL == l_p_space)
+		{
+			LOG_ERR("NULL == l_p_space");
+			return false;
+		}
+		
 		SCateNode l_o_node; // 注意内存空间开辟的时机
-		memset(&l_o_node, 0x00, MCRO_STRUCT_SIZE(l_o_node));
-		memcpy(&l_o_node, a_p_space + l_i_index, MCRO_STRUCT_SIZE(l_o_node));
+		memcpy((void*)&l_o_node, l_p_space, MCRO_STRUCT_SIZE(l_o_node));
 		l_i_index += MCRO_STRUCT_SIZE(l_o_node);
 
 		l_o_node.m_p_son_set = NULL; // 注意声明周期,数组根据结构体,所以此处不可有所指向指向
 
 		SCateNode::Print(&l_o_node);
-		std::cout << "------------------------------------------------""" << std::endl;
 
 		a_map_catalog[l_o_node.m_i_id] = l_o_node;
 
@@ -92,8 +97,6 @@ bool CSerialize::UnPackCatelog(byte* a_p_space, const uint32 a_i_size,  const ui
 
 		if (0 < l_o_node.m_i_son_num)
 		{
-			std::cout << l_o_node.m_i_son_num << std::endl;
-
 			// 生命周期跟随目录节点,节点内存被清理时释放开辟的空间
 			uint32* l_p_son_set = (uint32*) malloc (sizeof(uint32) * l_o_node.m_i_son_num);
 			if (NULL == l_p_son_set)
@@ -128,8 +131,7 @@ bool CSerialize::PackFileSysInfo(byte* a_p_space, const uint32 a_i_size, const S
 
 	if (MCRO_STRUCT_SIZE(SFileSysInfo) > a_i_size)
 	{
-		 std::cout<< "PackFileSysInfo err: size err, MCRO_STRUCT_SIZE(SFileSysInfo):" 
-		 	<<MCRO_STRUCT_SIZE(SFileSysInfo) << ", a_i_size:"<<a_i_size << std::endl;
+		LOG_ERR("a_i_size error");
 		return false;
 	}
 
@@ -164,7 +166,7 @@ bool CSerialize::PackAvalDiskInfo(byte* a_p_space, const uint32 a_i_size, const 
 }
 
 // 序列化目录树节点
-bool CSerialize::PackCatelog(byte* a_p_space, const uint32 a_i_size, const std::map<uint32, SCateNode>& a_map_catalog)
+bool CSerialize::PackCatelog(byte* a_p_space, const uint32 a_i_size, std::unordered_map<uint32, SCateNode>& a_map_catalog)
 {
 	if (NULL == a_p_space)
 	{
@@ -184,7 +186,7 @@ bool CSerialize::PackCatelog(byte* a_p_space, const uint32 a_i_size, const std::
 
 	// 检测空间容量
 	uint32 l_i_catalog_total_size = 0;
-	std::map<uint32, SCateNode>::const_iterator l_iter = a_map_catalog.begin();
+	std::unordered_map<uint32, SCateNode>::iterator l_iter = a_map_catalog.begin();
 	for (; l_iter != a_map_catalog.end(); ++l_iter) 
 	{
 		l_i_catalog_total_size += MACRO_CATE_NODE_SIZE(l_iter->second);
@@ -201,10 +203,9 @@ bool CSerialize::PackCatelog(byte* a_p_space, const uint32 a_i_size, const std::
 	l_iter = a_map_catalog.begin();
 	for (; l_iter != a_map_catalog.end(); ++l_iter) 
 	{
-		const SCateNode& l_o_node = l_iter->second;
+		SCateNode& l_o_node = l_iter->second;
 
 		SCateNode::Print((SCateNode*)&l_o_node);
-		std::cout << "------------------------------------------------" << std::endl;
 
 		// 拷贝结构体
 		memcpy(a_p_space + l_i_index, &l_o_node, MCRO_STRUCT_SIZE(SCateNode));

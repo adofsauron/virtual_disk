@@ -1,4 +1,4 @@
-// 处理虚拟磁盘镜像相关
+﻿// 处理虚拟磁盘镜像相关
 
 #ifndef __HANDLE_DISK_MIRROR_H__
 #define __HANDLE_DISK_MIRROR_H__
@@ -36,10 +36,10 @@ private:
     byte* m_p_total_disk;                      // 内存磁盘的整个的地址空间
 
 private:
-    const char* m_p_disk_mirror_name;           // 磁盘镜像名字
-    uint64 m_i_total_disk_size;                 // 总磁盘空间大小
-    uint64 m_i_disk_block;                      // 磁盘块大小
-    const uint64 m_i_buff_size;                 // 加载到内存的buff大小
+    const std::string   m_str_disk_mirror_name;           // 磁盘镜像名字
+    uint64              m_i_total_disk_size;                 // 总磁盘空间大小
+    uint64              m_i_disk_block;                      // 磁盘块大小
+    const uint64        m_i_buff_size;                 // 加载到内存的buff大小
 };
 
 #endif//__HANDLE_DISK_MIRROR_H__

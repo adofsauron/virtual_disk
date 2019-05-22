@@ -1,4 +1,4 @@
-#ifndef __CMD_EXIT_H__
+﻿#ifndef __CMD_EXIT_H__
 #define __CMD_EXIT_H__
 
 #include<stdio.h>

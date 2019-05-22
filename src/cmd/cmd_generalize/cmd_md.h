@@ -1,4 +1,4 @@
-#ifndef __CMD_MD_H__
+﻿#ifndef __CMD_MD_H__
 #define __CMD_MD_H__
 
 #include<stdio.h>

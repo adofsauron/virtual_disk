@@ -45,6 +45,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>__WIN32__;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -65,6 +66,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="..\..\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="..\..\src\base\base.h" />
     <ClInclude Include="..\..\src\base\cmd_def.h" />
     <ClInclude Include="..\..\src\base\config.h" />
@@ -83,6 +87,7 @@
     <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_del.h" />
     <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_dir.h" />
     <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_exit.h" />
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_help.h" />
     <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_load.h" />
     <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_md.h" />
     <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_mklink.h" />
@@ -115,6 +120,7 @@
     <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_del.cpp" />
     <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_dir.cpp" />
     <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_exit.cpp" />
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_help.cpp" />
     <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_load.cpp" />
     <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_md.cpp" />
     <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_mklink.cpp" />
@@ -132,9 +138,6 @@
     <ClCompile Include="..\..\src\tools\deal_string.cpp" />
     <ClCompile Include="..\..\src\tools\logger.cpp" />
     <ClCompile Include="..\..\src\tools\serialize.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,11 +1,28 @@
-// 文件操作
+﻿// 文件操作
 
 #ifndef __DEAL_FILE_H_
 #define __DEAL_FILE_H_
 
 #include <stdio.h>
-#include <unistd.h>
 #include <sys/stat.h>
+
+#ifdef __WIN32__
+#include <io.h>
+#include <process.h>
+
+enum
+{
+	F_OK = 0,
+	X_OK = 1,
+	W_OK = 2,
+	R_OK = 4,
+};
+
+
+#else
+#include <unistd.h>
+
+#endif//__WIN32__
 
 #include "../base/base.h"
 

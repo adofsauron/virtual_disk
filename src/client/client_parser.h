@@ -1,4 +1,4 @@
-#ifndef __CLIENT_PARSER_H__
+﻿#ifndef __CLIENT_PARSER_H__
 #define __CLIENT_PARSER_H__
 
 #include "../base/base.h"

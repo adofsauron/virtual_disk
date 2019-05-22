@@ -1,7 +1,7 @@
-#include "cmd_mklink.h"
+﻿#include "cmd_mklink.h"
 
 CCmdMklink::CCmdMklink(CHandleFileSys* l_p_handle_file_sys)
-    :CCmdBase(DEF_CMD_MKLINK, l_p_handle_file_sys)
+    :CCmdBase(CONST_CMD_MKLINK, l_p_handle_file_sys)
 {
 }
 
@@ -50,8 +50,8 @@ bool CCmdMklink::Dispose(const std::vector<std::string>& a_vec_args, std::string
     std::string l_str_link_file = a_vec_args[1];
 
      // 路径转换
-    CDealString::PathConver((char*)l_str_file.c_str(), l_str_file.length());
-    CDealString::PathConver((char*)l_str_link_file.c_str(), l_str_link_file.length());
+    CDealString::PathToIner(l_str_file);
+    CDealString::PathToIner(l_str_link_file);
 
 
     std::string l_str_full_name;

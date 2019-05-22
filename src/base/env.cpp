@@ -1,6 +1,6 @@
-#include "env.h"
+﻿#include "env.h"
 
-CEnv* CEnv::m_p_this = NULL;
+CEnv* CEnv::s_p_this = NULL;
 
 CEnv::CEnv()
     :m_str_pwd("/")
@@ -9,12 +9,17 @@ CEnv::CEnv()
 
 CEnv* CEnv::Instance()
 {
-    if (NULL == m_p_this)
+    if (NULL == s_p_this)
     {
-        m_p_this = new CEnv();
+        s_p_this = new CEnv();
     }
 
-    return m_p_this;
+    return s_p_this;
+}
+
+void CEnv::Realease()
+{
+    DELETE_PTR(s_p_this);
 }
 
 const std::string& CEnv::ChgPwd(const std::string& a_str_new_pwd)

@@ -1,4 +1,4 @@
-#ifndef __CMD_DEL_H__
+﻿#ifndef __CMD_DEL_H__
 #define __CMD_DEL_H__
 
 #include<stdio.h>

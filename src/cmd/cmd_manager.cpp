@@ -1,4 +1,4 @@
-#include "cmd_manager.h"
+﻿#include "cmd_manager.h"
 
 CCmdManager::CCmdManager(CHandleFileSys* a_p_hdle_file_sys)
 {
@@ -11,7 +11,7 @@ CCmdManager::CCmdManager(CHandleFileSys* a_p_hdle_file_sys)
     m_p_hdle_file_sys = a_p_hdle_file_sys;
 
     // 初始化
-    for (uint32 i=DEF_CMD_NO_CD; i<DEF_CMD_NO_MAX; ++i)
+    for (uint32 i=ENUM_CMD_NO_CD; i<ENUM_CMD_NO_MAX; ++i)
     {
         m_vec_cmd[i] = NULL;
     }
@@ -37,7 +37,7 @@ CCmdManager::~CCmdManager()
 
 bool CCmdManager::ClearCmd()
 {   
-    for (uint32 i=DEF_CMD_NO_CD; i<DEF_CMD_NO_MAX; ++i)
+    for (uint32 i=ENUM_CMD_NO_CD; i<ENUM_CMD_NO_MAX; ++i)
     {
         DELETE_PTR(m_vec_cmd[i]);
         m_vec_cmd[i] = NULL;
@@ -70,6 +70,7 @@ bool CCmdManager::InitCmd()
     l_b_reg_over = (l_b_reg_over && RegisterCmd<CCmdMove>());
     l_b_reg_over = (l_b_reg_over && RegisterCmd<CCmdRen>());
     l_b_reg_over = (l_b_reg_over && RegisterCmd<CCmdSave>());
+    l_b_reg_over = (l_b_reg_over && RegisterCmd<CCmdHelp>());
 
 
     return l_b_reg_over;
@@ -99,8 +100,9 @@ bool CCmdManager::RegisterCmd()
     }
 
     int l_i_no = GetCmdNo(l_str_cmd_name);
-    if ((l_i_no <= DEF_CMD_NO_INVL) || (l_i_no >= DEF_CMD_NO_MAX))
+    if ((l_i_no <= ENUM_CMD_NO_INVL) || (l_i_no >= ENUM_CMD_NO_MAX))
     {
+        std::cout << l_i_no << std::endl;
         LOG_ERR("cmd no err");
         return false;
     }
@@ -130,10 +132,11 @@ bool CCmdManager::RunCmd(const std::string& a_str_cmd, const std::vector<std::st
     }
 
     int l_i_no = GetCmdNo(a_str_cmd);
-    if ((l_i_no <= DEF_CMD_NO_INVL) || (l_i_no >= DEF_CMD_NO_MAX))
+    if ((l_i_no <= ENUM_CMD_NO_INVL) || (l_i_no >= ENUM_CMD_NO_MAX))
     {
-        a_str_resault = "cmd not find:";
-        LOG_ERR("cmd no err");
+        a_str_resault = "没有该命令:";
+        a_str_resault += a_str_cmd;
+        LOG_ERR("a_str_resault");
         return false;
     }
 
@@ -149,18 +152,19 @@ bool CCmdManager::RunCmd(const std::string& a_str_cmd, const std::vector<std::st
 
 int CCmdManager::GetCmdNo(const std::string& a_str_cmd)
 {
-    if(DEF_CMD_CD     	== a_str_cmd) return DEF_CMD_NO_CD		;
-    if(DEF_CMD_CLS      == a_str_cmd) return DEF_CMD_NO_CLS     ;
-    if(DEF_CMD_COPY     == a_str_cmd) return DEF_CMD_NO_COPY    ;
-    if(DEF_CMD_DEL      == a_str_cmd) return DEF_CMD_NO_DEL     ;
-    if(DEF_CMD_DIR      == a_str_cmd) return DEF_CMD_NO_DIR     ;
-    if(DEF_CMD_EXIT     == a_str_cmd) return DEF_CMD_NO_EXIT    ;
-    if(DEF_CMD_LOAD     == a_str_cmd) return DEF_CMD_NO_LOAD    ;
-    if(DEF_CMD_MD       == a_str_cmd) return DEF_CMD_NO_MD      ;
-    if(DEF_CMD_MKLINK   == a_str_cmd) return DEF_CMD_NO_MKLINK  ;
-    if(DEF_CMD_MOVE     == a_str_cmd) return DEF_CMD_NO_MOVE    ;
-    if(DEF_CMD_REN      == a_str_cmd) return DEF_CMD_NO_REN     ;
-    if(DEF_CMD_SAVE     == a_str_cmd) return DEF_CMD_NO_SAVE    ;
+    if(CONST_CMD_CD       == a_str_cmd) return ENUM_CMD_NO_CD	   ;
+    if(CONST_CMD_CLS      == a_str_cmd) return ENUM_CMD_NO_CLS     ;
+    if(CONST_CMD_COPY     == a_str_cmd) return ENUM_CMD_NO_COPY    ;
+    if(CONST_CMD_DEL      == a_str_cmd) return ENUM_CMD_NO_DEL     ;
+    if(CONST_CMD_DIR      == a_str_cmd) return ENUM_CMD_NO_DIR     ;
+    if(CONST_CMD_EXIT     == a_str_cmd) return ENUM_CMD_NO_EXIT    ;
+    if(CONST_CMD_LOAD     == a_str_cmd) return ENUM_CMD_NO_LOAD    ;
+    if(CONST_CMD_MD       == a_str_cmd) return ENUM_CMD_NO_MD      ;
+    if(CONST_CMD_MKLINK   == a_str_cmd) return ENUM_CMD_NO_MKLINK  ;
+    if(CONST_CMD_MOVE     == a_str_cmd) return ENUM_CMD_NO_MOVE    ;
+    if(CONST_CMD_REN      == a_str_cmd) return ENUM_CMD_NO_REN     ;
+    if(CONST_CMD_SAVE     == a_str_cmd) return ENUM_CMD_NO_SAVE    ;
+    if(CONST_CMD_HELP     == a_str_cmd) return ENUM_CMD_NO_HELP    ;
 
-    return DEF_CMD_NO_INVL;
+    return ENUM_CMD_NO_INVL;
 }

@@ -1,4 +1,4 @@
-#include "client_io.h"
+﻿#include "client_io.h"
 
 CClientIO::CClientIO(CClientCmdAdaptor* l_p_cmd_adaptor)
 {
@@ -26,8 +26,17 @@ void CClientIO::StartInput()
         m_str_output.clear();
         m_vec_commond.clear();
 
-        std::cout << "virtual_disk# ";
+        std::string l_str_cur;
+        CEnv::Instance()->GetPwd(l_str_cur);
+
+
+        std::cout << "virtual_disk ["<<l_str_cur<<"] # ";
         std::getline(std::cin, m_str_input);
+
+        if (m_str_input.empty())
+        {
+            continue;
+        }
 
         std::cout << "原始输入:" << m_str_input << std::endl;
 

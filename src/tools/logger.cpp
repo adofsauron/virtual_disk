@@ -1,11 +1,11 @@
-#include "logger.h"
+﻿#include "logger.h"
 
 
-CLogger* CLogger::m_p_this = NULL;
+CLogger* CLogger::s_p_this = NULL;
 
 CLogger::CLogger()
 {
-#if 0    
+#ifdef LOG_WRITE_FILE    
     m_b_init_over = false;
     m_p_log_name = config::CONST_LOG_FILE_PATH;
     m_p_log_name += config::CONST_LOG_FILE_NAME;
@@ -41,6 +41,8 @@ CLogger::CLogger()
 
 CLogger::~CLogger()
 {
+
+#ifdef LOG_WRITE_FILE
     if (NULL != m_p_log)
     {
         if (!CDealFile::FileClose(m_p_log))
@@ -51,28 +53,27 @@ CLogger::~CLogger()
 
         m_p_log = NULL;
     }
+#endif
 }
 
 CLogger* CLogger::Instance()
 {
-    if (NULL == m_p_this)
+    if (NULL == s_p_this)
     {
-        m_p_this = new CLogger();
+        s_p_this = new CLogger();
     }
 
-    return m_p_this;
+    return s_p_this;
 }
 
 void CLogger::ReleaseInstance()
 {
-    DELETE_PTR(m_p_this);
+    DELETE_PTR(s_p_this);
 }
 
 bool CLogger::WriteRecord(const std::string& a_str_record)
 {
-    std::cout << a_str_record;
-
-#if 0
+#ifdef LOG_WRITE_FILE
     if (NULL == m_p_log)
     {
         return false;
@@ -82,7 +83,8 @@ bool CLogger::WriteRecord(const std::string& a_str_record)
     {
         return false;
     }
-
+#else
+	std::cout << a_str_record;
 #endif
     return true;
 }

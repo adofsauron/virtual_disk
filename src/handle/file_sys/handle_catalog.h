@@ -1,11 +1,11 @@
-#ifndef __HANDLE_CATELOG_H__
+﻿#ifndef __HANDLE_CATELOG_H__
 #define __HANDLE_CATELOG_H__
 
 #include "string.h"
 
 #include <time.h>
 #include <stdlib.h>
-#include <map>
+#include <unordered_map>
 #include <set>
 
 #include "../..//base/base.h"
@@ -44,7 +44,7 @@ public:
     bool FatherDelSonId(const uint32 a_i_fid, const uint32 a_i_sid);  
 
     // 返回文件节点映射
-    inline std::map<uint32, SCateNode>& GetMapCatalog() { return m_map_catalog;};
+    inline std::unordered_map<uint32, SCateNode>& GetMapCatalog() { return m_map_catalog;};
 
     // 返回节点数量
     inline uint32 GetMapCataNodeNum() { return m_map_catalog.size(); };
@@ -78,9 +78,9 @@ private:
     // 关联容器如果用map,那每次插入节点和删除节点都会导致内部红黑树重新构建,影响性能
     // 但使用这种哈希方式,为了避免映射冲突,会占用过多的内存
     // 看主要瓶颈在cpu还是内存
-    std::map<uint32, SCateNode>            m_map_catalog;              // 目录节点id -> 目录节点的指针
+    std::unordered_map<uint32, SCateNode>            m_map_catalog;              // 目录节点id -> 目录节点的指针
     const uint32                           m_i_root_node_id;           // 根节点,永远为1,且不可修改
-    std::map<std::string, uint32>          m_map_full_name_to_id;      // cache, 绝对路径+文件名 -> 节点id
+    std::unordered_map<std::string, uint32>          m_map_full_name_to_id;      // cache, 绝对路径+文件名 -> 节点id
 
 };
 

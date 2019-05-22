@@ -1,7 +1,7 @@
-#include "cmd_load.h"
+﻿#include "cmd_load.h"
 
 CCmdLoad::CCmdLoad(CHandleFileSys* l_p_handle_file_sys)
-    :CCmdBase(DEF_CMD_LOAD, l_p_handle_file_sys)
+    :CCmdBase(CONST_CMD_LOAD, l_p_handle_file_sys)
 {
 }
 

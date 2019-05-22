@@ -1,9 +1,11 @@
-// 环境类
+﻿// 环境类
 
 #ifndef __ENV_H__
 #define __ENV_H__
 
 #include <string>
+
+#include "base.h"
 
 class CEnv
 {
@@ -12,6 +14,7 @@ private:
 
 public:
     static CEnv* Instance();
+    static void Realease();
 
 public:
     const std::string& ChgPwd(const std::string& a_str_new_pwd);
@@ -19,7 +22,7 @@ public:
 
 private:
     std::string m_str_pwd; // 当前路径
-    static CEnv* m_p_this;
+    static CEnv* s_p_this;
 };
 
 #endif//__ENV_H__

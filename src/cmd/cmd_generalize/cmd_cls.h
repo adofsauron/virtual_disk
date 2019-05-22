@@ -1,4 +1,4 @@
-#ifndef __CMD_CLS_H__
+﻿#ifndef __CMD_CLS_H__
 #define __CMD_CLS_H__
 
 #include<stdio.h>

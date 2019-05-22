@@ -1,4 +1,4 @@
-#include "start.h"
+﻿#include "start.h"
 
 CStartClass::CStartClass()
 {
@@ -61,7 +61,7 @@ CStartClass::~CStartClass()
     LOG_INFO("delete m_p_hdle_file_sys over");
     
     CLogger::ReleaseInstance();
-    LOG_INFO("release log over");
+    CEnv::Realease();
 }
 
 bool CStartClass::Start()

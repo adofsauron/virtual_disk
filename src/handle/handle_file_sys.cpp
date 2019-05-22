@@ -1,4 +1,4 @@
-#include "handle_file_sys.h"
+﻿#include "handle_file_sys.h"
 
 // RAII
 CHandleFileSys::CHandleFileSys()
@@ -140,7 +140,7 @@ bool CHandleFileSys::CreateFileSys()
 
     LOG_RECORD(LOG_INFO,"PackAvalDiskInfo over");
 
-    const std::map<uint32, SCateNode>& l_map_catelog = m_p_hdle_catelog->GetMapCatalog();
+    std::unordered_map<uint32, SCateNode>& l_map_catelog = m_p_hdle_catelog->GetMapCatalog();
     if(! CSerialize::PackCatelog(l_p_disk_space + l_i_disk_index, l_i_file_sys_size - l_i_disk_index, l_map_catelog))
     {
         LOG_ERR("PackCatelog err");
@@ -250,21 +250,13 @@ bool CHandleFileSys::LoadFileSys()
 
     l_i_disk_index += 0 + MCRO_STRUCT_SIZE(SAvalDiskInfo);
 
-    std::map<uint32, SCateNode>& l_map_catelog = m_p_hdle_catelog->GetMapCatalog();
+    std::unordered_map<uint32, SCateNode>& l_map_catelog = m_p_hdle_catelog->GetMapCatalog();
 
     if (! CSerialize::UnPackCatelog(l_p_disk_space + l_i_disk_index, (l_i_file_sys_size - l_i_disk_index), l_o_file_sys_info.m_i_cate_node_num, l_map_catelog))
     {
         LOG_RECORD(LOG_ERR, "UnPackCatelog err");
         return false;
     }
-
-
-    if (! ReBuildCatelogCache())
-    {
-        LOG_ERR("ReBuildCatelogCache err"); 
-        return false;
-    }
-
 
     return true;
 }
@@ -369,21 +361,43 @@ bool CHandleFileSys::CheckPathExist(const std::string& a_str_path, SCateNode*& a
         return false;
     }
 
-    std::map<uint32, SCateNode>& l_map_catelog = m_p_hdle_catelog->GetMapCatalog();
-    std::map<uint32, SCateNode>::iterator l_iter = l_map_catelog.begin();
+    std::unordered_map<uint32, SCateNode>& l_map_catelog = m_p_hdle_catelog->GetMapCatalog();
+    std::unordered_map<uint32, SCateNode>::iterator l_iter = l_map_catelog.begin();
 
     for (; l_iter != l_map_catelog.end(); ++ l_iter)
     {
         SCateNode* l_p_node = &l_iter->second;
+        const std::string l_str_full_name = l_p_node->m_p_full_name;
 
-        if (0 == strncmp(a_str_path.c_str(), l_p_node->m_p_full_name, a_str_path.length()))
+        if ( a_str_path.length() != l_str_full_name.length())
         {
+            continue;
+        }
+
+        if (a_str_path == l_str_full_name)
+        {
+            // std::string log;
+            // log = "same:";
+            // log += l_p_node->m_p_full_name;
+            // log += ", cmp:";
+            // log += a_str_path;
+            // LOG_DEBUG(log)
             a_p_cata_node = l_p_node;
             return true;
         }
     }
 
     return false;
+}
+
+bool CHandleFileSys::GetCateNodeById(const uint32 a_i_id, SCateNode*& a_p_cata_node)
+{
+    if (NULL == m_p_hdle_catelog)
+    {
+        return false;
+    }
+
+    return m_p_hdle_catelog->GetCateNode(a_i_id, a_p_cata_node);
 }
 
 bool CHandleFileSys::GetFullPath(const std::string& a_str_give_path, std::string& a_str_full_path)
@@ -416,10 +430,6 @@ bool CHandleFileSys::GetFullPath(const std::string& a_str_give_path, std::string
         CEnv::Instance()->GetPwd(l_str_cur_path);
     }
 
-    std::string log = "cur path:";
-    log += l_str_cur_path;
-    LOG_INFO(log);
-
     std::vector<std::string> l_vec_cur_path;
     CDealString::SplitString(l_str_cur_path, "/", l_vec_cur_path);
 
@@ -443,24 +453,30 @@ bool CHandleFileSys::GetFullPath(const std::string& a_str_give_path, std::string
             {
                 l_vec_cur_path.pop_back();
             }
+
+            continue;
         }
 
         l_vec_cur_path.push_back(l_str_node_name);
     }
 
     a_str_full_path.clear();
-    for (size_t i=0; i<l_vec_cur_path.size(); ++i)
-    {
-        a_str_full_path += "/";
-        a_str_full_path += l_vec_cur_path[i];
-    }
 
-    if (a_str_full_path.empty())
+    if (l_vec_cur_path.empty())
     {
         a_str_full_path = "/";
     }
+    else
+    {
+        for (size_t i=0; i<l_vec_cur_path.size(); ++i)
+        {
+            a_str_full_path += "/";
+            a_str_full_path += l_vec_cur_path[i];
+        }
 
-    CDealString::CombineChar((char*)a_str_full_path.c_str(), a_str_full_path.length(),'/');
+         CDealString::CombineChar((char*)a_str_full_path.c_str(), a_str_full_path.length(),'/');
+    }
+    
 
     return true;
 }
@@ -496,19 +512,23 @@ bool CHandleFileSys::GetFatherNameByFullName(const std::string& a_str_full_path,
     l_vec_cur_path.pop_back();
 
     a_str_father_name.clear();
-    for (size_t i=0; i < l_vec_cur_path.size(); ++i)
-    {
-        a_str_father_name += "/";
-        a_str_father_name += l_vec_cur_path[i];
-        
-    }
 
-    if (a_str_father_name.empty())
+    if (l_vec_cur_path.empty())
     {
-        a_str_father_name = "/";
+         a_str_father_name = "/";
     }
+    else
+    {
+        for (size_t i=0; i < l_vec_cur_path.size(); ++i)
+        {
+            a_str_father_name += "/";
+            a_str_father_name += l_vec_cur_path[i];
+            
+        }
 
-    CDealString::CombineChar((char*)a_str_father_name.c_str(), a_str_father_name.length(), '/');
+        CDealString::CombineChar((char*)a_str_father_name.c_str(), a_str_father_name.length(), '/');
+    }
+    
     return true;
 }
 
@@ -719,18 +739,21 @@ bool CHandleFileSys::DelFile(const std::string& a_str_full_name)
 {
     if (a_str_full_name.empty())
     {
+		LOG_ERR("");
         return false;
     }
 
     // 不可删除跟节点
     if ("/" == a_str_full_name)
     {
+		LOG_ERR("");
         return false;
     }
 
     SCateNode* l_p_node;
     if (!CheckPathExist(a_str_full_name, l_p_node)) // 文件不存在
     {
+		LOG_ERR("");
         return false;
     }
 
@@ -739,24 +762,28 @@ bool CHandleFileSys::DelFile(const std::string& a_str_full_name)
     {
         if (NULL == m_p_hdle_aval_disk)
         {
+			LOG_ERR("");
             return false;
         }
 
-        // TODO: 只有可用空间 最后边一块占用内存被删除，空间才能被继续使用，中间的空间，依然不可用
+        // 只有可用空间 最后边一块占用内存被删除，空间才能被继续使用，中间的空间，依然不可用
         if (! m_p_hdle_aval_disk->ReleaseSpace(l_p_node->m_i_disk_index, l_p_node->m_i_file_size))
         {
+			LOG_ERR("");
             return false;
         }
     }
 
     if (NULL == m_p_hdle_catelog)
     {
+		LOG_ERR("");
         return false;
     }
 
     // 2. 释放所有的子节点空间和缓存,注意此次操作,只可处理子树
     if ((l_p_node->m_i_son_num > 0) && (NULL == l_p_node->m_p_son_set))
     {
+		LOG_ERR("");
         return false;
     }
 
@@ -767,17 +794,20 @@ bool CHandleFileSys::DelFile(const std::string& a_str_full_name)
         SCateNode* l_p_snode = NULL;
         if (!m_p_hdle_catelog->GetCateNode(l_i_sid, l_p_snode))
         {
+			LOG_ERR("");
             return false;
         }
 
         if (NULL == l_p_snode)
         {
+			LOG_ERR("");
             return false;
         }
 
         // 深度优先,从最底层开始删除
         if (!DelFile(l_p_snode->m_p_full_name))
         {
+			LOG_ERR("");
             return false;
         }
     }
@@ -785,40 +815,40 @@ bool CHandleFileSys::DelFile(const std::string& a_str_full_name)
     // 3. 删除父节点中保存的子节点信息
     if (!m_p_hdle_catelog->FatherDelSonId(l_p_node->m_i_parent_id, l_p_node->m_i_id))
     {
+		LOG_ERR("");
         return false;
     }
 
     // 4. 清理目录树节点
     if (!m_p_hdle_catelog->DelCateNode(l_p_node->m_i_id))
     {
+		LOG_ERR("");
         return false;
     }
 
-    // 5. 清理缓存, TODO: 应先清理节点，再清理缓存
-    // 若先清理缓存,在清理节点时出错返回返回，则虽然缓存没有，但是空间依然存在，内存泄露远超过缓存
-    if (!m_p_hdle_catelog->DelCacheFullName2Id(l_p_node->m_p_full_name))
-    {
-        return false;
-    }
+	ReBuildCatelogCache();
 
     return true;
 }
 
-bool CHandleFileSys::ApplayAvalSpace(const uint64 a_i_size, byte* a_p_aval_space, uint64& a_i_incex)
+bool CHandleFileSys::ApplayAvalSpace(const uint64 a_i_size, byte*& a_p_aval_space, uint64& a_i_incex)
 {
     uint64 l_i_aval_size = 0;
-    if (GetAvalSpace(l_i_aval_size))
+    if (! GetAvalSpace(l_i_aval_size))
     {
+        LOG_ERR("");
         return false;
     }
 
     if (a_i_size > l_i_aval_size)
     {
+        LOG_ERR("");
         return false;
     }
 
     if (NULL == m_p_hdle_aval_disk)
     {
+        LOG_ERR("");
         return false;
     }
 
@@ -826,12 +856,14 @@ bool CHandleFileSys::ApplayAvalSpace(const uint64 a_i_size, byte* a_p_aval_space
 
     if (NULL == l_p_aval_disk_ptr)
     {
+        LOG_ERR("");
         return false;
     }
 
     uint64 l_i_aval_index = 0;
-    if (m_p_hdle_aval_disk->ApplaySpace(a_i_size,a_i_incex))
+    if (! m_p_hdle_aval_disk->ApplaySpace(a_i_size,a_i_incex))
     {
+        LOG_ERR("");
         return false;
     }
 
@@ -842,10 +874,10 @@ bool CHandleFileSys::ApplayAvalSpace(const uint64 a_i_size, byte* a_p_aval_space
     return true;
 }
 
-bool CHandleFileSys::GetAvalSpaceByIndex(const uint64 a_i_incex, byte* a_p_space)
+bool CHandleFileSys::GetAvalSpaceByIndex(const uint64 a_i_incex, byte*& a_p_space)
 {
     uint64 l_i_aval_size = 0;
-    if (GetAvalSpace(l_i_aval_size))
+    if (! GetAvalSpace(l_i_aval_size))
     {
         return false;
     }
@@ -876,9 +908,10 @@ bool CHandleFileSys::GetAvalSpaceByIndex(const uint64 a_i_incex, byte* a_p_space
 bool CHandleFileSys::CollectDirBrief(const std::string& a_str_full_name, std::vector<uint32>& a_vec_son_name)
 {
     SCateNode* l_p_node;
-    if (!CheckPathExist(a_str_full_name, l_p_node)) // 路径不存在
+    if (! CheckPathExist(a_str_full_name, l_p_node)) // 路径不存在
     {
         LOG_ERR("CheckPathExist err");
+        LOG_ERR(a_str_full_name);
         return false;
     }
 
@@ -916,7 +949,7 @@ bool CHandleFileSys::CollectDirBrief(const std::string& a_str_full_name, std::ve
 }
 
 // 输出目录下文件，含子目录
-bool CHandleFileSys::CollectDirTotal(const std::string& a_str_full_name, std::map<std::string, std::vector<uint32> >& a_map_son)
+bool CHandleFileSys::CollectDirTotal(const std::string& a_str_full_name, std::unordered_map<std::string, std::vector<uint32> >& a_map_son)
 {
     SCateNode* l_p_node;
     if (! CheckPathExist(a_str_full_name, l_p_node)) // 路径不存在
@@ -974,7 +1007,7 @@ bool CHandleFileSys::CollectDirTotal(const std::string& a_str_full_name, std::ma
 
         if (CNODE_DIR != l_p_snode->m_i_type) // 叶子节点
         {
-            return true;
+			continue;
         }
 
         CollectDirTotal(l_p_snode->m_p_full_name, a_map_son);
@@ -1002,19 +1035,19 @@ bool CHandleFileSys::PrintNode(const SCateNode* a_p_node, std::string& a_str_inf
         break;
 
     case CNODE_DIR:
-        l_chr_type = "d";
+        l_chr_type = "<DIR>";
         break;
 
     case CNODE_FILE:
-        l_chr_type = "-";
+        l_chr_type = "<FIL>";
         break;
 
     case CNODE_LINK:
-        l_chr_type = "l";
+        l_chr_type = "<LNK>";
         break;
     
     default:
-        l_chr_type = "&"; // 非法类型
+        l_chr_type = "<ERR>"; // 非法类型
         break;
     }
 
@@ -1027,11 +1060,13 @@ bool CHandleFileSys::PrintNode(const SCateNode* a_p_node, std::string& a_str_inf
 
     // 模仿linux输出格式
     memset(l_p_buff, 0x00, sizeof(l_p_buff));
-    snprintf(l_p_buff, 2048, "type[%s]\taccess[%s]\tsize:%d\tupate_time[%s]\tname:{[%s]|[%s]}", 
-        l_chr_type, l_str_acess.c_str(), a_p_node->m_i_file_size, l_str_update_time.c_str(), a_p_node->m_p_full_name, a_p_node->m_p_name);
+    snprintf(l_p_buff, 2048, "%4s %s\t%8d bytes\t%s\t%10s", 
+        l_chr_type, l_str_acess.c_str(), a_p_node->m_i_file_size, l_str_update_time.c_str(), a_p_node->m_p_name);
 
 
     a_str_info += l_p_buff;
+    a_str_info += "\t";
+    a_str_info += a_p_node->m_p_full_name;
 
     if (CNODE_LINK == a_p_node->m_i_type)
     {
@@ -1039,18 +1074,19 @@ bool CHandleFileSys::PrintNode(const SCateNode* a_p_node, std::string& a_str_inf
         SCateNode* l_p_node = NULL;
         if (!m_p_hdle_catelog->GetCateNode(l_i_link_id, l_p_node))
         {
-            a_str_info += "---->链接文件已失效!";
+            a_str_info += "------------>链接文件已失效!";
             return true;
         }
 
         if (NULL == l_p_node)
         {
-            a_str_info += "---->链接文件已失效!";
+            a_str_info += "------------>链接文件已失效!";
             return true;
         }
 
-        a_str_info += "------------>";
+        a_str_info += "------------>[";
         a_str_info += l_p_node->m_p_full_name;
+        a_str_info += "]";
     }
 
     return true;
@@ -1072,22 +1108,26 @@ bool CHandleFileSys::MoveNode(const uint32 l_i_id, const uint32 l_i_old_fid, con
 {
     if (!m_p_hdle_catelog->FatherDelSonId(l_i_old_fid, l_i_id))
     {
+        LOG_ERR("FatherDelSonId err");
         return false;
     }
 
     if (!m_p_hdle_catelog->FatherAddSonId(l_i_new_fid, l_i_id))
     {
+        LOG_ERR("FatherAddSonId err");
         return false;
     }
 
     SCateNode* l_p_node = NULL;
     if (!m_p_hdle_catelog->GetCateNode(l_i_id, l_p_node))
     {
+        LOG_ERR("GetCateNode err");
         return false;
     }
 
     if (NULL == l_p_node)
     {
+        LOG_ERR("l_p_node null");
         return false;
     }
 
@@ -1129,13 +1169,6 @@ bool CHandleFileSys::SaveFileSys()
         return false;
     }
 
-    // if (! ReBuildCatelogCache())
-    // {
-    //     LOG_ERR("ReBuildCatelogCache err"); 
-    //     return false;
-    // }
-
-
     LOG_INFO("ready save file sys");
 
     m_o_file_sys_info.m_i_cate_node_num = m_p_hdle_catelog->GetMapCataNodeNum();
@@ -1154,10 +1187,6 @@ bool CHandleFileSys::SaveFileSys()
     l_i_disk_index += MCRO_STRUCT_SIZE(SFileSysInfo);
 
     LOG_INFO("PackFileSysInfo over");
-
-    // std::string log;
-    // PrintSFileSysInfo(m_o_file_sys_info, log);
-    // LOG_RECORD(LOG_INFO, log);
 
     if (! CSerialize::PackAvalDiskInfo(l_p_disk_space + l_i_disk_index, l_i_file_sys_size - l_i_disk_index, m_p_hdle_aval_disk->GetAvalDiskInfo()))
     {
@@ -1187,15 +1216,40 @@ bool CHandleFileSys::SaveFileSys()
     return true;
 }
 
-void CHandleFileSys::PrintSFileSysInfo(const SFileSysInfo& a_o_info, std::string& a_str_log)
+
+bool CHandleFileSys::MotifySonFullName(const uint32 l_i_fid)
 {
-	char buff[2048] = {0x00};
-	snprintf(buff, 2048, 
-		"\n m_i_disk_total_size:%llu\n m_i_aval_disk_info_index:%llu\n m_i_catelog_space_index:%llu\n m_i_cate_node_num:%llu\n m_i_aval_disk_space_index:%llu\n m_i_disk_block_size:%llu\n",
-		a_o_info.m_i_disk_total_size, a_o_info.m_i_aval_disk_info_index, a_o_info.m_i_catelog_space_index, a_o_info.m_i_cate_node_num,
-		a_o_info.m_i_aval_disk_space_index, a_o_info.m_i_disk_block_size
-		);
+	SCateNode* l_p_src_cate_node = NULL;
+	if (! GetCateNodeById(l_i_fid, l_p_src_cate_node))
+	{
+		return false;
+	}
 
-	a_str_log = buff;
+	// 修改子文件的绝对名
+	if (l_p_src_cate_node->m_i_son_num > 0)
+	{
+		for (uint32 i = 0; i < l_p_src_cate_node->m_i_son_num; ++i)
+		{
+			const uint32 l_i_sid = l_p_src_cate_node->m_p_son_set[i];
+			SCateNode* l_p_node = NULL;
+			if (! GetCateNodeById(l_i_sid, l_p_node))
+			{
+				continue;
+			}
+
+			std::string l_str_new_full_name = l_p_src_cate_node->m_p_full_name;
+			l_str_new_full_name += "/";
+			l_str_new_full_name += l_p_node->m_p_name;
+			memset(l_p_node->m_p_full_name, 0x00, config::CONST_MAX_SIZE_FILE_FULL_NAME + 1);
+			memcpy(l_p_node->m_p_full_name, l_str_new_full_name.c_str(), config::CONST_MAX_SIZE_FILE_FULL_NAME + 1);
+
+			if (CNODE_DIR == l_p_node->m_i_type)
+			{
+				MotifySonFullName(l_i_sid);
+			}
+
+		}
+	}
+
+	return true;
 }
-

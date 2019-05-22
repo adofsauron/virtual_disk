@@ -1,4 +1,4 @@
-#include "client_cmd_adaptor.h"
+﻿#include "client_cmd_adaptor.h"
 
 CClientCmdAdaptor::CClientCmdAdaptor(CCmdManager* l_p_cmd_mangaer)
 {

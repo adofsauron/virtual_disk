@@ -1,4 +1,4 @@
-
+﻿
 #ifndef __PLATFORM_H__
 #define __PLATFORM_H__
 
@@ -23,7 +23,16 @@ typedef unsigned int		uint;
 typedef uint8				byte;
 
 
-//#define NULL                (nullptr)
+#ifdef __WIN32__
+
+#pragma warning(disable:4819)
+#pragma warning(disable:4244)
+#pragma warning(disable:4103) 
+
+#define snprintf _snprintf
+#define access _access
+
+#endif//__WIN32__
 
 
 

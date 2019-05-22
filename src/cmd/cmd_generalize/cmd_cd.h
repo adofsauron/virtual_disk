@@ -1,4 +1,4 @@
-#ifndef __CMD_CD_H__
+﻿#ifndef __CMD_CD_H__
 #define __CMD_CD_H__
 
 #include "../cmd_base.h"

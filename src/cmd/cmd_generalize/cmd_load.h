@@ -1,4 +1,4 @@
-#ifndef __CMD_LOAD_H__
+﻿#ifndef __CMD_LOAD_H__
 #define __CMD_LOAD_H__
 
 #include<stdio.h>

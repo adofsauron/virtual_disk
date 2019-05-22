@@ -1,10 +1,10 @@
-#include "handle_disk_mirror.h"
+﻿#include "handle_disk_mirror.h"
 
 
 CHandleDiskMirror::CHandleDiskMirror()
-    :m_i_buff_size(config::CONST_MAX_SIZE_MIRROR_BUFF)
+    :m_str_disk_mirror_name(config::CONST_DISK_MIRROR_NAME),
+    m_i_buff_size(config::CONST_MAX_SIZE_MIRROR_BUFF)
 {
-    m_p_disk_mirror_name = config::CONST_DISK_MIRROR_NAME;
     m_p_total_disk = (byte*) malloc (m_i_buff_size * sizeof(byte));
     memset(m_p_total_disk, 0x00, m_i_buff_size);
 }
@@ -48,16 +48,16 @@ bool CHandleDiskMirror::LoadDiskMirror()
         return false;
     }
 
-    if (!CDealFile::CheckFileExist(m_p_disk_mirror_name))
+    if (!CDealFile::CheckFileExist(m_str_disk_mirror_name.c_str()))
     {
         return false;
     }
 
     FILE* l_p_file = NULL;
-    if (!CDealFile::FileOpen(m_p_disk_mirror_name, "rb+", l_p_file))
+    if (!CDealFile::FileOpen(m_str_disk_mirror_name.c_str(), "rb+", l_p_file))
     {
         log = "FileOpen err:";
-        log += m_p_disk_mirror_name;
+        log += m_str_disk_mirror_name.c_str();
         LOG_RECORD(LOG_ERR, log);
         return false;
     }
@@ -83,7 +83,7 @@ bool CHandleDiskMirror::LoadDiskMirror()
     if (!CDealFile::FileRead(m_p_total_disk, m_i_total_disk_size, m_i_disk_block, l_i_count, l_p_file))
     {
         log = "FileRead err:";
-        log += m_p_disk_mirror_name;
+        log += m_str_disk_mirror_name.c_str();
         LOG_RECORD(LOG_ERR, log);
         return false;
     }
@@ -91,7 +91,7 @@ bool CHandleDiskMirror::LoadDiskMirror()
     if (!CDealFile::FileClose(l_p_file))
     {
         log = "FileClose err:";
-        log += m_p_disk_mirror_name;
+        log += m_str_disk_mirror_name.c_str();
         LOG_RECORD(LOG_ERR, log);
         return false;
     }
@@ -110,9 +110,9 @@ bool CHandleDiskMirror::SaveDiskMirror()
     }
 
     // 镜像文件不存在则创建,若存在直接数据覆盖
-    if (! CDealFile::CheckFileExist(m_p_disk_mirror_name))
+    if (! CDealFile::CheckFileExist(m_str_disk_mirror_name.c_str()))
     {
-        if(! CDealFile::FileCreate(m_p_disk_mirror_name))
+        if(! CDealFile::FileCreate(m_str_disk_mirror_name.c_str()))
         {
             std::cout << "FileCreate error"<< std::endl;
             return false;
@@ -120,7 +120,7 @@ bool CHandleDiskMirror::SaveDiskMirror()
     }
 
     FILE* l_p_file = NULL;
-    if (! CDealFile::FileOpen(m_p_disk_mirror_name, "rb+", l_p_file))
+    if (! CDealFile::FileOpen(m_str_disk_mirror_name.c_str(), "rb+", l_p_file))
     {
         std::cout << "FileOpen error"<< std::endl;
         return false;
@@ -149,11 +149,11 @@ bool CHandleDiskMirror::SaveDiskMirror()
 
 bool CHandleDiskMirror::CheckDiskMirrorExist()
 {
-    if (NULL == m_p_disk_mirror_name)
+    if (m_str_disk_mirror_name.empty())
     {
         return false;
     }
 
-    return CDealFile::CheckFileExist(m_p_disk_mirror_name);
+    return CDealFile::CheckFileExist(m_str_disk_mirror_name.c_str());
 }
 

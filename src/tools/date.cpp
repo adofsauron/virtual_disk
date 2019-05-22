@@ -1,4 +1,4 @@
-
+﻿
 #include "date.h"
 
 std::string CDate::m_str_date = "";

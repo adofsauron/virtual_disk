@@ -1,4 +1,4 @@
-#include "handle_aval_disk.h"
+﻿#include "handle_aval_disk.h"
 
 CHandleAvalDisk::CHandleAvalDisk()
     :m_p_aval_disk_space(NULL),

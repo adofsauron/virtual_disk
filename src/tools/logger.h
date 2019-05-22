@@ -1,4 +1,4 @@
-#ifndef __LOGGER_H__
+﻿#ifndef __LOGGER_H__
 #define __LOGGER_H__
 
 #include <iostream>
@@ -48,8 +48,10 @@ private:
 	FILE* 			m_p_log;
 	bool 			m_b_init_over;
 private:
-	static CLogger* m_p_this;
+	static CLogger* s_p_this;
 };
+
+#ifdef DEBUG_LOG
 
 #define LOG_RECORD(log_level, str) 													\
 do { 																				\
@@ -67,6 +69,10 @@ do { 																				\
 	l_str_log += "\n";																\
 	CLogger::Instance()->WriteRecord(l_str_log); 									\
 } while(0);
+
+#else
+	#define LOG_RECORD(log_level, str) 
+#endif//DEBUG_LOG
 
 
 #define LOG_INFO(str) 	LOG_RECORD(LOG_INFO,	str)

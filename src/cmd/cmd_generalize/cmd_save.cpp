@@ -1,7 +1,7 @@
-#include "cmd_save.h"
+﻿#include "cmd_save.h"
 
 CCmdSave::CCmdSave(CHandleFileSys* l_p_handle_file_sys)
-    :CCmdBase(DEF_CMD_SAVE, l_p_handle_file_sys)
+    :CCmdBase(CONST_CMD_SAVE, l_p_handle_file_sys)
 {
 }
 

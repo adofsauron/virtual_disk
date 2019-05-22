@@ -1,4 +1,4 @@
-#ifndef __CMD_MANAGER_H__
+﻿#ifndef __CMD_MANAGER_H__
 #define __CMD_MANAGER_H__
 
 #include <map>
@@ -21,6 +21,7 @@
 #include "cmd_generalize/cmd_move.h"
 #include "cmd_generalize/cmd_ren.h"
 #include "cmd_generalize/cmd_save.h"
+#include "cmd_generalize/cmd_help.h"
 
 class CHandleFileSys;
 class CCmdBase;
@@ -37,6 +38,8 @@ class CCmdMklink;
 class CCmdMove;
 class CCmdRen;
 class CCmdSave;
+class CCmdSave;
+class CCmdHelp;
 
 class CCmdManager
 {
@@ -72,7 +75,7 @@ private:
     CHandleFileSys*                             m_p_hdle_file_sys;
     bool                                        m_b_init_over;
 
-    CCmdBase*                                   m_vec_cmd[DEF_CMD_NO_MAX];
+    CCmdBase*                                   m_vec_cmd[ENUM_CMD_NO_MAX];
 
 };
 

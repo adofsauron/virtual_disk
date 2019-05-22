@@ -1,4 +1,4 @@
-#ifndef __MACRO_H__
+﻿#ifndef __MACRO_H__
 #define __MACRO_H__
 
 #include "platform.h"

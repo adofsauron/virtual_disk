@@ -1,4 +1,4 @@
-#ifndef __CMD_MOVE_H__
+﻿#ifndef __CMD_MOVE_H__
 #define __CMD_MOVE_H__
 
 #include<stdio.h>

@@ -1,4 +1,4 @@
-#ifndef __CLIENT_IO_H__
+﻿#ifndef __CLIENT_IO_H__
 #define __CLIENT_IO_H__
 
 #include <string>

@@ -6,46 +6,34 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="base">
-      <UniqueIdentifier>{59c2671d-520e-4d37-9bb2-61f792e9c193}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="tools">
-      <UniqueIdentifier>{f07115ee-0419-4a8d-a3bb-adb7dbfb8896}</UniqueIdentifier>
+      <UniqueIdentifier>{5b9b49a2-05a4-47ce-ace1-e94ee0b70745}</UniqueIdentifier>
     </Filter>
     <Filter Include="client">
-      <UniqueIdentifier>{4f55a87a-8873-4742-be30-bee526cacc05}</UniqueIdentifier>
+      <UniqueIdentifier>{35a1af59-6570-4a44-8574-b40b6699d5bd}</UniqueIdentifier>
     </Filter>
     <Filter Include="cmd">
-      <UniqueIdentifier>{0db4def6-cb74-4d89-993d-0f164d299d1f}</UniqueIdentifier>
+      <UniqueIdentifier>{09a6881a-a651-4ff7-ab0d-a4bc18306399}</UniqueIdentifier>
     </Filter>
     <Filter Include="handle">
-      <UniqueIdentifier>{dbc59444-7b47-41f3-a755-ce32cecbb0b1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="cmd\cmd_generalize">
-      <UniqueIdentifier>{967f860d-41a8-477f-8112-3cc0c9c5f4fc}</UniqueIdentifier>
+      <UniqueIdentifier>{f179d211-00d5-4c96-bc00-3d7c5a12f16d}</UniqueIdentifier>
     </Filter>
     <Filter Include="start">
-      <UniqueIdentifier>{4881e233-50bf-4091-b0fe-94547077ccae}</UniqueIdentifier>
+      <UniqueIdentifier>{a3ca3337-d2d5-4306-91d1-6ac442cc976d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools">
+      <UniqueIdentifier>{38651ad5-6ae6-4d99-8a43-c73218ae4564}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cmd\cmd_generalize">
+      <UniqueIdentifier>{2b69c0ef-9788-4d32-b041-0059e57a65a3}</UniqueIdentifier>
     </Filter>
     <Filter Include="handle\file_sys">
-      <UniqueIdentifier>{54290cd3-f3de-4269-83fd-0385d094217d}</UniqueIdentifier>
+      <UniqueIdentifier>{5410fca1-eec7-4722-acf2-dff2e2da03fc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\base\platform.h">
-      <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\base\pack_def.h">
-      <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\tools\serialize.h">
-      <Filter>tools</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\base\macro.h">
-      <Filter>base</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\tools\date.h">
-      <Filter>tools</Filter>
-    </ClInclude>
+    <None Include="..\..\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="..\..\src\base\base.h">
       <Filter>base</Filter>
     </ClInclude>
@@ -61,6 +49,15 @@
     <ClInclude Include="..\..\src\base\errno.h">
       <Filter>base</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\base\macro.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\base\pack_def.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\base\platform.h">
+      <Filter>base</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\src\client\client_cmd_adaptor.h">
       <Filter>client</Filter>
     </ClInclude>
@@ -69,30 +66,6 @@
     </ClInclude>
     <ClInclude Include="..\..\src\client\client_parser.h">
       <Filter>client</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\tools\deal_file.h">
-      <Filter>tools</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\tools\deal_string.h">
-      <Filter>tools</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\tools\logger.h">
-      <Filter>tools</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\handle\handle_file_sys.h">
-      <Filter>handle</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\handle\file_sys\handle_aval_disk.h">
-      <Filter>handle\file_sys</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\handle\file_sys\handle_catalog.h">
-      <Filter>handle\file_sys</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\handle\file_sys\handle_disk_mirror.h">
-      <Filter>handle\file_sys</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\start\start.h">
-      <Filter>start</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\cmd\cmd_base.h">
       <Filter>cmd</Filter>
@@ -118,6 +91,9 @@
     <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_exit.h">
       <Filter>cmd\cmd_generalize</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_help.h">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_load.h">
       <Filter>cmd\cmd_generalize</Filter>
     </ClInclude>
@@ -139,6 +115,36 @@
     <ClInclude Include="..\..\src\cmd\cmd_generalize\cmd_save.h">
       <Filter>cmd\cmd_generalize</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\handle\handle_file_sys.h">
+      <Filter>handle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\handle\file_sys\handle_aval_disk.h">
+      <Filter>handle\file_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\handle\file_sys\handle_catalog.h">
+      <Filter>handle\file_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\handle\file_sys\handle_disk_mirror.h">
+      <Filter>handle\file_sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tools\date.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tools\deal_file.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tools\deal_string.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tools\logger.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tools\serialize.h">
+      <Filter>tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\start\start.h">
+      <Filter>start</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\base\env.cpp">
@@ -155,36 +161,6 @@
     </ClCompile>
     <ClCompile Include="..\..\src\client\client_parser.cpp">
       <Filter>client</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\tools\date.cpp">
-      <Filter>tools</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\tools\deal_file.cpp">
-      <Filter>tools</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\tools\deal_string.cpp">
-      <Filter>tools</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\tools\logger.cpp">
-      <Filter>tools</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\tools\serialize.cpp">
-      <Filter>tools</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\handle\handle_file_sys.cpp">
-      <Filter>handle</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\handle\file_sys\handle_aval_disk.cpp">
-      <Filter>handle\file_sys</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\handle\file_sys\handle_catalog.cpp">
-      <Filter>handle\file_sys</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\handle\file_sys\handle_disk_mirror.cpp">
-      <Filter>handle\file_sys</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\start\start.cpp">
-      <Filter>start</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\cmd\cmd_base.cpp">
       <Filter>cmd</Filter>
@@ -210,6 +186,9 @@
     <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_exit.cpp">
       <Filter>cmd\cmd_generalize</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_help.cpp">
+      <Filter>cmd\cmd_generalize</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_load.cpp">
       <Filter>cmd\cmd_generalize</Filter>
     </ClCompile>
@@ -228,8 +207,35 @@
     <ClCompile Include="..\..\src\cmd\cmd_generalize\cmd_save.cpp">
       <Filter>cmd\cmd_generalize</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\readme.md" />
+    <ClCompile Include="..\..\src\handle\handle_file_sys.cpp">
+      <Filter>handle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\handle\file_sys\handle_aval_disk.cpp">
+      <Filter>handle\file_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\handle\file_sys\handle_catalog.cpp">
+      <Filter>handle\file_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\handle\file_sys\handle_disk_mirror.cpp">
+      <Filter>handle\file_sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tools\date.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tools\deal_file.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tools\deal_string.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tools\logger.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tools\serialize.cpp">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\start\start.cpp">
+      <Filter>start</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

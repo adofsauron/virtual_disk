@@ -1,4 +1,4 @@
-#ifndef __HANDLE_AVAL_DISK_H__
+﻿#ifndef __HANDLE_AVAL_DISK_H__
 #define __HANDLE_AVAL_DISK_H__
 
 #include "../..//base/base.h"

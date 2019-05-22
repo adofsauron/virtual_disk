@@ -1,4 +1,4 @@
-#include "deal_file.h"
+﻿#include "deal_file.h"
 
 bool CDealFile::CheckFileAccess(const char* a_p_file_name, const uint32 a_i_mode)
 {

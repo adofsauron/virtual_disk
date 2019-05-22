@@ -4,13 +4,12 @@ cmake_minimum_required(VERSION 3.13)
 # 项目信息
 project (virtual_disk)
 
-SET(CMAKE_CXX_FLAGS_DEBUG "-g -std=c++11 -o0 -ggdb -Wall -Wno-unused-variable -Wno-class-memaccess -Wno-format-truncation")
-SET(CMAKE_CXX_FLAGS_RELEASE "-g  -std=c++11 -O3")
+SET(CMAKE_CXX_FLAGS_DEBUG "-g  -o0 -ggdb -Wall -DDEBUG_LOG")
+SET(CMAKE_CXX_FLAGS_RELEASE "-g -O3")
 SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--hash-style=sysv")
-#add_definitions(-DENABLE_MONGODB)
-add_definitions(-DDEBUG_LOG)
 
-SET(CMAKE_BUILD_TYPE Debug)
+#SET(CMAKE_BUILD_TYPE Debug)
+SET(CMAKE_BUILD_TYPE Release)
 
 add_subdirectory(base)
 add_subdirectory(client)

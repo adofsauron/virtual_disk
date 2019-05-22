@@ -1,4 +1,4 @@
-#ifndef __CMD_BASE_H__
+﻿#ifndef __CMD_BASE_H__
 #define __CMD_BASE_H__
 
 #include <string>

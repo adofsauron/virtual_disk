@@ -1,7 +1,7 @@
-#include "cmd_md.h"
+﻿#include "cmd_md.h"
 
 CCmdMd::CCmdMd(CHandleFileSys* l_p_handle_file_sys)
-    :CCmdBase(DEF_CMD_MD, l_p_handle_file_sys)
+    :CCmdBase(CONST_CMD_MD, l_p_handle_file_sys)
 {
 }
 
@@ -9,8 +9,7 @@ bool CCmdMd::CheckFeasibility(const std::vector<std::string>& a_vec_args, std::s
 {
     if (1 != a_vec_args.size())
     {
-        a_str_proc_resault = "参数不是1个:";
-        a_str_proc_resault += a_vec_args.size();
+        a_str_proc_resault = "参数不是1个";
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return false;
     }
@@ -34,16 +33,16 @@ bool CCmdMd::Dispose(const std::vector<std::string>& a_vec_args, std::string& a_
         return false;
     }
 
-    std::string l_str_file = a_vec_args[0];
+    std::string l_str_path = a_vec_args[0];
 
      // 路径转换
-    CDealString::PathConver((char*)l_str_file.c_str(), l_str_file.length());
+    CDealString::PathToIner(l_str_path);
 
      std::string l_str_full_name;
-    if(!m_p_handle_file_sys->GetFullPath(l_str_file,l_str_full_name))
+    if(!m_p_handle_file_sys->GetFullPath(l_str_path,l_str_full_name))
     {
         a_str_proc_resault = "获取文件的绝对路径失败:";
-        a_str_proc_resault += l_str_file;
+        a_str_proc_resault += l_str_path;
         LOG_RECORD(LOG_ERR,a_str_proc_resault);
         return false;
     }

@@ -1,4 +1,4 @@
-#ifndef __PROC_STRING_H__
+﻿#ifndef __PROC_STRING_H__
 #define __PROC_STRING_H__
 
 #include <stdio.h>
@@ -9,6 +9,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
+#include <regex>
 
 #include "../base/base.h"
 
@@ -50,7 +51,16 @@ public:
 	// c++风格的处理
 	
 	// 分隔字符串 
-	static std::vector<std::string>& SplitString(const std::string& str,const std::string& pattern, std::vector<std::string>& resultVec);
+	static std::vector<std::string>& SplitString(const std::string& str,const std::string& a_str_pattern, std::vector<std::string>& resultVec);
+
+	// 通配单个字符
+	// a_str_pre 原字符串；  通配字符 ?； a_str_given要比较的字符串
+	static bool CheckRegexSin(const std::string& a_str_pre, const char a_chr, const std::string& a_str_given);
+
+	// 查找子字符串
+	static bool FindSubStr(const std::string& a_str_given, const std::string& a_str_sub);
+
+	static bool PathToIner(std::string& a_str_path);
 
 };
 

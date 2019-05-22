@@ -1,4 +1,4 @@
-#ifndef __DATE_H__
+﻿#ifndef __DATE_H__
 #define __DATE_H__
 
 #include <time.h>
