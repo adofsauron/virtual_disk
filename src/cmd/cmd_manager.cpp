@@ -86,16 +86,11 @@ bool CCmdManager::RegisterCmd()
 
     CCmdBase* l_p_cmd = new CLASS(m_p_hdle_file_sys);
 
-    if (NULL == l_p_cmd)
-    {
-        return false;
-    }
-
     const std::string& l_str_cmd_name = l_p_cmd->GetCmdName();
-
     if (l_str_cmd_name.empty())
     {
         LOG_ERR("l_str_cmd_name.empty()");
+		DELETE_PTR(l_p_cmd);
         return false;
     }
 
@@ -104,12 +99,14 @@ bool CCmdManager::RegisterCmd()
     {
         std::cout << l_i_no << std::endl;
         LOG_ERR("cmd no err");
+		DELETE_PTR(l_p_cmd);
         return false;
     }
     
     if (NULL != m_vec_cmd[l_i_no])
     {
         LOG_ERR("cmd exist");
+		DELETE_PTR(l_p_cmd);
         return false;
     }
 

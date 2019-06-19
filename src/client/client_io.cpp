@@ -38,8 +38,6 @@ void CClientIO::StartInput()
             continue;
         }
 
-        std::cout << "原始输入:" << m_str_input << std::endl;
-
         // 命令校验
         if(! CheckInput())
         {
